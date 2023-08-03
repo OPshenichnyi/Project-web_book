@@ -1,0 +1,5 @@
+/*Connecting all .css files here!*/
+@import url(./common.css);
+@import url(./reset.css);
+@import url(./variables.css);
+@import url(./categories.css);
