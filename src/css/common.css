@@ -1,0 +1,26 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  background-color: var(--white-bgc);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 365px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 734px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1206px;
+  }
+}
