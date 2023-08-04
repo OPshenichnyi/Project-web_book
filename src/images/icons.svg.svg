@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <!-- <symbol id="icon-Icon-3" viewBox="0 0 32 32">
+      <path fill="#111"  stroke-linecap="round" stroke-linejoin="round" stroke-width="5.333" d="M28.444 3.556 3.555 28.445m.001-24.889 24.889 24.889"/>
+    </symbol> -->
+    <symbol id="lock-icon" viewBox="0 0 25 32">
+      <path  d="M22.814 8.593H18.37V7.112a5.93 5.93 0 0 0-5.926-5.926 5.93 5.93 0 0 0-5.926 5.926v1.481H2.074a1.482 1.482 0 0 0-1.482 1.482v16.296a4.444 4.444 0 0 0 4.445 4.445h14.815a4.444 4.444 0 0 0 4.445-4.445V10.075a1.482 1.482 0 0 0-1.482-1.482zM9.481 7.111a2.962 2.962 0 0 1 5.058-2.095c.556.556.868 1.309.868 2.095v1.481H9.481V7.111zM21.333 26.37a1.478 1.478 0 0 1-1.482 1.481H5.036a1.482 1.482 0 0 1-1.482-1.481V11.555h2.963v1.481a1.482 1.482 0 1 0 2.964 0v-1.481h5.926v1.481a1.482 1.482 0 1 0 2.964 0v-1.481h2.963V26.37z "/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 43 32">
+      <path  fill="#111"  stroke-linecap="round" stroke-linejoin="round" stroke-width="5.333" d="M3.555 16H39.11m0 0L25.777 2.667M39.11 16 25.777 29.333"/>
+    </symbol>
+  </defs>
+</svg>
