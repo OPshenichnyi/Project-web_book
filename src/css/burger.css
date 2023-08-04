@@ -1,4 +1,13 @@
+.burger-mobile-menu {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .aaa {
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+  }
   /* .burger-mobile-menu-top {
     position: absolute;
 
