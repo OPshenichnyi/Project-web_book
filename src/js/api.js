@@ -1,59 +1,33 @@
 const apiUrl = 'https://books-backend.p.goit.global/books';
 
-async function getCategories() {
-  try {
-    const response = await fetch(`${apiUrl}/category-list`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
+function fetchData(url) {
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(error);
+      throw error;
+    });
 }
 
-async function getTopBooks() {
-  try {
-    const response = await fetch(`${apiUrl}/top-books`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
+function getCategories() {
+  return fetchData(`${apiUrl}/category-list`);
 }
 
-async function getBooksByCategory(category) {
-  try {
-    const response = await fetch(`${apiUrl}/category?category=${category}`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
+function getAllBooks() {
+  return fetchData(`${apiUrl}/top-books`);
 }
 
-async function getBookById(id) {
-  try {
-    const response = await fetch(`${apiUrl}/${id}`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
+function getBookByCategory(selectedCategory) {
+  return fetchData(`${apiUrl}/category?category=${selectedCategory}`);
 }
 
-export { getCategories, getTopBooks, getBooksByCategory, getBookById };
+function getBookById(id) {
+  return fetchData(`${apiUrl}/${id}`);
+}
+
+export { getCategories, getAllBooks, getBookByCategory, getBookById };
