@@ -24,3 +24,43 @@ body {
     max-width: 1206px;
   }
 }
+
+.title {
+  color: #111;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1875;
+  /* 118.75% */
+  letter-spacing: -1.28px;
+}
+
+.title-tail {
+  color: #4F2EE8;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1875;
+  letter-spacing: -1.28px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08333;
+    /* 108.333% */
+    letter-spacing: -1.92px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-tail {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08333;
+    /* 108.333% */
+    letter-spacing: -1.92px;
+  }
+}
