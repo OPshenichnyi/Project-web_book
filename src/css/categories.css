@@ -23,7 +23,7 @@
 .category_list:active {
   font-weight: 700;
   text-transform: uppercase;
-  color: #4f2ee8;
+  color: var(--violet);
 }
 
 .category_title {
@@ -42,41 +42,13 @@
 .category_title:hover {
   font-weight: 700;
   text-transform: uppercase;
-  color: #4f2ee8;
+  color: var(--violet);
   background-color: white;
 }
 
 .category__list .category_list.active,
 .category_title.active {
   background-color: white;
-  color: #4f2ee8;
+  color: var(--violet);
   font-weight: 700;
-}
-
-@media screen and (max-width: 767px) {
-  .category_list {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.1;
-  }
-
-  .category_list:hover,
-  .category_list:active,
-  .category_list:focus {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #4f2ee8;
-  }
-
-  .categories {
-    width: 335px;
-    height: 228px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .categories {
-    width: 337px;
-    height: 472px;
-  }
 }
