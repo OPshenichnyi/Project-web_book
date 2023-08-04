@@ -43,6 +43,14 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #4f2ee8;
+  background-color: white;
+}
+
+.category__list .category_list.active,
+.category_title.active {
+  background-color: white;
+  color: #4f2ee8;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 767px) {

@@ -1,39 +1,58 @@
-import axios from 'axios';
-
 const apiUrl = 'https://books-backend.p.goit.global/books';
 
 async function getCategories() {
   try {
-    const result = await axios.get(`${apiUrl}/category-list`);
-    return result;
-  } catch (e) {
-    return e;
+    const response = await fetch(`${apiUrl}/category-list`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
 }
 
 async function getTopBooks() {
   try {
-    const result = await axios.get(`${apiUrl}/top-books`);
-    return result;
-  } catch (e) {
-    return e;
+    const response = await fetch(`${apiUrl}/top-books`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
 }
 
 async function getBooksByCategory(category) {
   try {
-    const result = await axios.get(`${apiUrl}/category?category=${category}`);
-    return result;
-  } catch (e) {
-    return e;
+    const response = await fetch(`${apiUrl}/category?category=${category}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
 }
+
 async function getBookById(id) {
   try {
-    const result = await axios.get(`${apiUrl}/${id}`);
-    return result;
-  } catch (e) {
-    return e;
+    const response = await fetch(`${apiUrl}/${id}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
 }
 
