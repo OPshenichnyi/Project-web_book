@@ -1,33 +1,45 @@
-const apiUrl = 'https://books-backend.p.goit.global/books';
-
-function fetchData(url) {
-  return fetch(url)
-    .then(response => {
+function getCategories() {
+  return fetch('https://books-backend.p.goit.global/books/category-list ').then(
+    response => {
       if (!response.ok) {
         throw new Error(response.statusText);
       }
       return response.json();
-    })
-    .catch(error => {
-      console.error(error);
-      throw error;
-    });
-}
-
-function getCategories() {
-  return fetchData(`${apiUrl}/category-list`);
+    }
+  );
 }
 
 function getAllBooks() {
-  return fetchData(`${apiUrl}/top-books`);
+  return fetch('https://books-backend.p.goit.global/books/top-books').then(
+    response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    }
+  );
 }
 
 function getBookByCategory(selectedCategory) {
-  return fetchData(`${apiUrl}/category?category=${selectedCategory}`);
+  return fetch(
+    `https://books-backend.p.goit.global/books/category?category=${selectedCategory}`
+  ).then(response => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    return response.json();
+  });
 }
 
 function getBookById(id) {
-  return fetchData(`${apiUrl}/${id}`);
+  return fetch(`https://books-backend.p.goit.global/books/${id}`).then(
+    response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    }
+  );
 }
 
 export { getCategories, getAllBooks, getBookByCategory, getBookById };
