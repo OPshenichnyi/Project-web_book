@@ -22,7 +22,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 99;
     top: 0;
     left: 0;
 
@@ -69,7 +69,43 @@
 
     transition: color 250ms linear;
   }
-  .burger-header-link-first:active {
+  .burger-menu_shopping-list {
+    fill: #111;
+  }
+
+  .burger-mobile-header-item > .current {
+    /* color: blue; */
+    padding: 8px 16px;
+    /* display: flex; */
+    align-items: center;
+    /* gap: 10px; */
+    border-radius: 36px;
+    cursor: pointer;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    background-color: #eac645;
+    font-weight: 700;
+    color: #111;
+    fill: #111;
+    stroke: #111;
+    transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .current::after {
+    content: ' ';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    /* transition: opacity var(--transition-dur-func); */
+  }
+
+  /* .burger-header-link-first:active {
     width: 72px;
     height: 34px;
 
@@ -94,7 +130,7 @@
     background: #eac645;
     fill: #111;
     stroke: #111;
-  }
+  } */
 
   .burger-menu_shopping-list {
     fill: #fff;
@@ -153,13 +189,17 @@
     font-size: 14px;
     line-height: 1.29;
     letter-spacing: -0.56px;
+    stroke: #eac645;
 
-    transition: background 250ms linear, border 250ms linear, scale 250ms linear;
+    transition: background 250ms linear, border 250ms linear,
+      scale 2500ms linear, stroke 250ms linear;
   }
   .burger-mobile-menu_log-out:focus {
     scale: 105%;
     background: #eac645;
     border: transparent;
+
+    stroke: #111;
   }
 
   .burger-menu_img-conteinet-beckgr {
@@ -172,7 +212,7 @@
     z-index: 1;
   }
 
-  .burger-menu_log-out {
-    stroke: #111;
-  }
+  /* .burger-menu_log-out {
+    stroke: #eac645;
+  } */
 }
