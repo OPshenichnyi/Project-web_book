@@ -2,9 +2,12 @@
 @import url(./common.css);
 @import url(./reset.css);
 @import url(./variables.css);
-<<<<<<< HEAD
+
 @import url(./burger.css);
-=======
+
 @import url(./shopping-list.css);
 @import url(./categories.css);
->>>>>>> 739ea0d96f5dc898a556d7479bb7aa06d774daaa
+
+@import url(./charity.css);
+@import url(./charity.css);
+@import url(./books.css);

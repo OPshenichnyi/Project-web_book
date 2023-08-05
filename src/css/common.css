@@ -1,3 +1,33 @@
+
+@font-face {
+  font-family: DM Sans;
+  font-weight: 600;
+  src: url(../fonts/DMSans-Bold.woff2) format("woff2"),
+    url(../fonts/DMSans-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: DM Sans;
+  font-weight: 400;
+  src: url(../fonts/DMSans-Regular.woff2) format("woff2"),
+    url(../fonts/DMSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: DM Sans;
+  font-weight: 500;
+  src: url(../fonts/DMSans-Medium.woff2) format("woff2"),
+    url(../fonts/DMSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/DMSans-Italic.woff2) format("woff2"),
+    url(../fonts/DMSans-Italic.woff) format("woff");
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -16,7 +46,9 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 734px;
+    
   }
+  
 }
 
 @media screen and (min-width: 1280px) {
