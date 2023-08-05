@@ -9,7 +9,7 @@ function renderBookInfo(book, inShoppingList) {
   <div class="modal book-card__modal scrollable">
     <button class="modal-close__btn js-book-close">
       <img src=${new URL(
-        // ' путь к - x-close.svg',
+        '../images/icons_by_one/close.svg',
         import.meta.url
       )} alt="close_icon" width="24" height="24"/>
     </button>
