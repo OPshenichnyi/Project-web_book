@@ -74,12 +74,16 @@
   height: 32px;
   border-radius: 50%;
   border-color: transparent;
+  background-color: var(--white-bgc);
   display: flex;
   margin-left: 152px;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 20px;
+}
+.svg-charity {
+  fill: var(--violet);
 }
 
 @media screen and (min-width: 768px) {
