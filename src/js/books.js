@@ -12,7 +12,8 @@ function createList(data) {
 }
 
 function markupBookCart(category, arrBook) {
-   const titleSection = `<h2 class="js-name-category">${category}</h2>`;
+  const titleSection = `<h2 class="js-name-category">${category}</h2>`;
+  
   const book = arrBook.map(e => `<li class="js-item-book">
             <img class="img-book" src="${e.book_image}" alt="">
             <div class="js-title-book">
