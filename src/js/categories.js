@@ -1,6 +1,8 @@
 import { getCategories } from './api.js';
 
-getCategories().then(data => createMarkupCategory(data));
+getCategories()
+  .then(data => createMarkupCategory(data))
+  .catch(error => console.error('Error fetching categories:', error));
 
 function createMarkupCategory(data) {
   const categoryEL = data
