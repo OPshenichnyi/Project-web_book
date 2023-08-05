@@ -24,7 +24,12 @@ a {
 }
 
 button {
+  font-family: inherit;
   cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  border: none;
+  background: none;
 }
 
 img {
