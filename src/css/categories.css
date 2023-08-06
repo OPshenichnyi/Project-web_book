@@ -1,14 +1,25 @@
 .categories {
-  width: 307px;
-  height: 472px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 230px;
   overflow: auto;
+}
+
+.categories::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+  height: 114px;
+  border-radius: 12px;
+  background: var(--scroller-color);
 }
 
 .category_list {
   cursor: pointer;
   color: rgba(17, 17, 17, 0.6);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
   letter-spacing: -0.02em;
   padding: 0;
