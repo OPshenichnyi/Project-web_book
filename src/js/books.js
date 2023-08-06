@@ -1,8 +1,11 @@
-import {getAllBooks} from './api'
+import { getAllBooks, getBookByCategory } from './api'
+import{createCategoryMarkup} from './book-by-category'
 const refs = {
   categoriesContEl: document.querySelector(".categories"),
-  bookEl: document.querySelector(".book_cards")
+  bookEl: document.querySelector(".book_cards"),
+  seeMore: document.querySelector('js-btn-category')
 }
+
 
 
 getAllBooks().then(data => createList(data))
@@ -25,5 +28,14 @@ function markupBookCart(category, arrBook) {
     refs.bookEl.insertAdjacentHTML('beforeend',
         `<div class="js-container-categories">${titleSection}
         <ul class="js-list-books-category">${book}</ul>
-        <button type="button" class="js-btn-category">SEE MORE</button></div>`);
+        <button type="button" class="js-btn-category"id="${category}">SEE MORE</button></div>`);
+}
+
+refs.bookEl.addEventListener('click', (e) => {clickSeeMore(e.target.textContent, e.target.id)});
+
+function clickSeeMore(typeBtn, selectCategory) {
+    if (typeBtn === 'SEE MORE') {
+    getBookByCategory(selectCategory).then(data =>
+        createCategoryMarkup(data, selectCategory))
+  }
 }
