@@ -49,7 +49,7 @@ const charitys = [
   const scrollDownButton = document.getElementById("scroll-down");
   
   let startIndex = 0;
-  const itemsPerPage = 4;
+  const itemsPerPage = 6;
   
   function renderCharities(startIndex) {
     containerWrapper.innerHTML = "";
@@ -57,12 +57,12 @@ const charitys = [
       const index = i % charitys.length;
       const { title, url, img } = charitys[index];
       const container = document.createElement("div");
-      container.classList.add("container");
+      container.classList.add("content");
       container.innerHTML = `
               <div class="number">${(index + 1).toString().padStart(2, "0")}</div>
               <li class="list-charity">
-                  <a href="${url}">
-                      <img class="images" src="${img}" alt="${title}" height="32px">
+                  <a href="${url}" target="_blank">
+                      <img class="images-charity" src="${img}" alt="${title}" height="32px">
                   </a>
               </li>
           `;
