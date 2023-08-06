@@ -2,47 +2,47 @@ const charitys = [
     {
       title: "Save the Children",
       url: "https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis",
-      img: "/img/save_2x.png",
+      img: "../images/charity/save_2x.png",
     },
     {
       title: "Project HOPE",
       url: "https://www.projecthope.org/country/ukraine/",
-      img: "/img/hope_2x.png",
+      img: "./images/charity/hope_2x.png",
     },
     {
       title: "UNITED24",
       url: "https://u24.gov.ua/uk",
-      img: "/img/united_2x.png",
+      img: "/images/charity/united_2x.png",
     },
     {
       title: "International Medical Corps",
       url: "https://internationalmedicalcorps.org/country/ukraine/",
-      img: "/img/medical_2x.png",
+      img: "/images/charity/medical_2x.png",
     },
     {
       title: "Medicins Sans Frontieres",
       url: "https://www.msf.org/ukraine",
-      img: "src/images/charity/medecins_2x.png",
+      img: "/images/charity/medecins_2x.png",
     },
     {
       title: "RAZOM",
       url: "https://www.razomforukraine.org/",
-      img: "/img/razom_2x.png",
+      img: "/images/charity/razom_2x.png",
     },
     {
       title: "Action against hunger",
       url: "https://www.actionagainsthunger.org/location/europe/ukraine/",
-      img: "/img/action_2x.png",
+      img: "/images/charity/action_2x.png",
     },
     {
       title: "World vision",
       url: "https://www.wvi.org/emergencies/ukraine",
-      img: "/img/vision_2x.png",
+      img: "/images/charity/vision_2x.png",
     },
     {
       title: "Serhiy Prytula Charity Foundation",
       url: "https://prytulafoundation.org/en",
-      img: "/img/prytula_2x.png",
+      img: "/images/charity/prytula_2x.png",
     },
   ];
   const containerWrapper = document.querySelector(".container-wrapper");
@@ -56,15 +56,15 @@ const charitys = [
     for (let i = startIndex; i < startIndex + itemsPerPage; i++) {
       const index = i % charitys.length;
       const { title, url, img } = charitys[index];
-      const container = document.createElement("div");
+      const container = document.createElement("li");
       container.classList.add("content");
       container.innerHTML = `
-              <div class="number">${(index + 1).toString().padStart(2, "0")}</div>
-              <li class="list-charity">
+              <span class="number">${(index + 1).toString().padStart(2, "0")}</span>
+              <span class="list-charity">
                   <a href="${url}" target="_blank">
-                      <img class="images-charity" src="${img}" alt="${title}" height="32px">
+                      <img class="images-charity" src="${img}" alt="${title}" height="32">
                   </a>
-              </li>
+              </span>
           `;
       containerWrapper.appendChild(container);
     }

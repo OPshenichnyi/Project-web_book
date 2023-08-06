@@ -1,16 +1,19 @@
-.charity-wrap { 
+.charity-wrap {
   position: relative;
-  box-sizing: border-box;
   height: 352px;
-  width: 335px;
+  max-width: 335px;
   padding-top: 28px;
   border-radius: 16px;
-  background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
-  box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);
+  background: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
+  box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 }
 
 .container-wrapper {
-  width: 100%;
+  width: 160px;
   height: 188px;
   position: absolute;
   margin-top: 44px;
@@ -25,7 +28,6 @@
   margin-bottom: 20px;
   box-sizing: border-box;
 }
-
 
 .svg-container {
   width: 20px;
@@ -50,7 +52,6 @@
   margin-left: 16px;
 }
 
-
 .title-charity {
   color: var(--white-bgc);
   font-size: 22px;
@@ -74,42 +75,45 @@
   height: 32px;
   border-radius: 50%;
   border-color: transparent;
+  background-color: var(--white-bgc);
   display: flex;
-  margin-left: 152px;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.svg-charity {
+  fill: var(--violet);
 }
 
 @media screen and (min-width: 768px) {
   .container-wrapper {
-    
     height: 292px;
-   
     margin-top: 42px;
-    
   }
-  .charity-wrap{
+  .charity-wrap {
     height: 474px;
     padding-top: 26px;
   }
-  .title-charity{
+  .title-charity {
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: -0.96px;
   }
-  .show-button{
+  .show-button {
     bottom: 24px;
   }
-
 }
 
-@media screen and (min-width: 1280px){
-  .charity-wrap{
+@media screen and (min-width: 1280px) {
+  .charity-wrap {
     width: 356px;
   }
-  .show-button{
+  .show-button {
     margin-left: 159px;
   }
 }

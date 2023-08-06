@@ -1,57 +1,74 @@
-.book-by-genre{
-    list-style: none;
-    margin-top: 40px;
+.book-by-genre {
+  list-style: none;
+  margin-top: 40px;
 }
 
-.book-name{
-    margin-top: 14px;
-    margin-bottom: 4px;
-    color: var(--black-first-color);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.125;
-    letter-spacing: -0.64px;
-    text-transform: uppercase;
+.book-title {
+  margin-top: 14px;
+  margin-bottom: 4px;
 }
 
-.contributor{
-    color: var(--gray);
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.166;
-    letter-spacing: -0.48px;
-    }
+.book-name {
 
-.js-category-title{
-    color: var(--violet);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1.188;
-    letter-spacing: -1.28px;
-    margin-top: 40px;
+  color: var(--black-first-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
 }
-.img_book{
-    width: 320px;
-    height: 400px;
+
+.contributor {
+  color: var(--gray);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.166;
+  letter-spacing: -0.48px;
 }
+
+.last-title-el {
+  color: var(--violet);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.183;
+  letter-spacing: -1.92px;
+}
+
+.js-category-title {
+  color: var(--black-first-color);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1, 083;
+  letter-spacing: -1.92px;
+  margin-top: 40px;
+
+}
+
+.img_book {
+  width: 320px;
+  height: 400px;
+}
+
 @media screen and (min-width: 768px) {
-.js-cont-for-books{
+  .js-cont-for-books {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-}
-.book-by-genre{
-flex-basis: calc((100% - 50px)/3);
-}
+  }
+
+  .book-by-genre {
+    flex-basis: calc((100% - 50px)/3);
+  }
 
 }
 
 @media screen and (min-width: 1280px) {
-.js-cont-for-books {
-        gap: 24px;
-    }
-    .book-by-genre {
-        flex-basis: calc((100% - 96px)/5);
-    }
+  .js-cont-for-books {
+    gap: 24px;
+  }
+
+  .book-by-genre {
+    flex-basis: calc((100% - 96px)/5);
+  }
 }
