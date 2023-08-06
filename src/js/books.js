@@ -3,7 +3,8 @@ import{createCategoryMarkup} from './book-by-category'
 const refs = {
   categoriesContEl: document.querySelector(".categories"),
   bookEl: document.querySelector(".book_cards"),
-  seeMore: document.querySelector('js-btn-category')
+  seeMore: document.querySelector('.js-btn-category'),
+  allCategoryies: document.querySelector('.category_title')
 }
 
 
@@ -29,13 +30,24 @@ function markupBookCart(category, arrBook) {
         `<div class="js-container-categories">${titleSection}
         <ul class="js-list-books-category">${book}</ul>
         <button type="button" class="js-btn-category"id="${category}">SEE MORE</button></div>`);
+  refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id) });
 }
 
-refs.bookEl.addEventListener('click', (e) => {clickSeeMore(e.target.textContent, e.target.id)});
+
+
 
 function clickSeeMore(typeBtn, selectCategory) {
     if (typeBtn === 'SEE MORE') {
     getBookByCategory(selectCategory).then(data =>
-        createCategoryMarkup(data, selectCategory))
+      createCategoryMarkup(data, selectCategory))
+      refs.bookEl.removeEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id)});
   }
+}
+
+
+refs.allCategoryies.addEventListener('click', () => cleanSectionBook())
+
+function cleanSectionBook() {
+   refs.bookEl.innerHTML = '';
+   getAllBooks().then(data => createList(data))
 }
