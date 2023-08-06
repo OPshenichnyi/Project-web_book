@@ -1,5 +1,5 @@
 import { _FetchBooks } from './fetchBooks';
-export { renderBookInfo };
+export { renderBookInfo }; 
 
 function renderBookInfo(book, inShoppingList) {
   const card__btn = inShoppingList
@@ -9,7 +9,7 @@ function renderBookInfo(book, inShoppingList) {
   <div class="modal book-card__modal scrollable">
     <button class="modal-close__btn js-book-close">
       <img src=${new URL(
-        '../images/icons_by_one/close.svg',
+          '../images/icons_by_one/close.svg',
         import.meta.url
       )} alt="close_icon" width="24" height="24"/>
     </button>

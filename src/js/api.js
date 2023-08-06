@@ -9,7 +9,7 @@ function getCategories() {
   );
 }
 
-function getAllBooks() {
+ function getAllBooks() {
   return fetch('https://books-backend.p.goit.global/books/top-books').then(
     response => {
       if (!response.ok) {

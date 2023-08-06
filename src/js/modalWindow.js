@@ -1,6 +1,7 @@
 import { FetchBooks } from './fetchBooks';
 import { renderBookInfo } from './modalRendering';
 
+
 const books = document.querySelector('.top-books');
 if (books) {
   books.addEventListener('click', async event => {
@@ -108,6 +109,9 @@ if (books) {
     }
   });
 }
+
+
+
 
 
 
