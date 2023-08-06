@@ -27,7 +27,7 @@ function markupBookCart(category, arrBook) {
     refs.bookEl.insertAdjacentHTML('beforeend',
         `<div class="js-container-categories">${titleSection}
         <ul class="js-list-books-category">${book}</ul>
-        <button type="button" class="js-btn-category">SEE MORE</button></div>`);
+        <button type="button" class="js-btn-category" id="${category}">SEE MORE</button></div>`);
 }
 
 refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id) });
