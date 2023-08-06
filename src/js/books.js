@@ -2,7 +2,8 @@ import { getAllBooks } from './api'
 import{createCategoryMarkup} from './book-by-category'
 const refs = {
   categoriesContEl: document.querySelector(".categories"),
-  bookEl: document.querySelector(".book_cards")
+  bookEl: document.querySelector(".book_cards"),
+   seeMore: document.querySelector('js-btn-category')
 }
 
 
