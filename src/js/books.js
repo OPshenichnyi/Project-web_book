@@ -27,3 +27,12 @@ function markupBookCart(category, arrBook) {
         <ul class="js-list-books-category">${book}</ul>
         <button type="button" class="js-btn-category">SEE MORE</button></div>`);
 }
+
+refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id) });
+
+function clickSeeMore(typeBtn, selectCategory) {
+    if (typeBtn === 'SEE MORE') {
+    getBookByCategory(selectCategory).then(data =>
+        createCategoryMarkup(data, selectCategory))
+  }
+}
