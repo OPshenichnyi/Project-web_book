@@ -1,34 +1,39 @@
-
 @font-face {
   font-family: DM Sans;
   font-weight: 700;
-  src: url(../fonts/DMSans-Bold.woff2) format("woff2"),
-    url(../fonts/DMSans-Bold.woff) format("woff");
+  src: url(../fonts/DMSans-Bold.woff2) format('woff2'),
+    url(../fonts/DMSans-Bold.woff) format('woff');
 }
 
 @font-face {
   font-family: DM Sans;
   font-weight: 400;
-  src: url(../fonts/DMSans-Regular.woff2) format("woff2"),
-    url(../fonts/DMSans-Regular.woff) format("woff");
+  src: url(../fonts/DMSans-Regular.woff2) format('woff2'),
+    url(../fonts/DMSans-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: DM Sans;
   font-weight: 500;
-  src: url(../fonts/DMSans-Medium.woff2) format("woff2"),
-    url(../fonts/DMSans-Medium.woff) format("woff");
+  src: url(../fonts/DMSans-Medium.woff2) format('woff2'),
+    url(../fonts/DMSans-Medium.woff) format('woff');
 }
 
 @font-face {
   font-family: DM Sans;
   font-style: italic;
   font-weight: 400;
-  src: url(../fonts/DMSans-Italic.woff2) format("woff2"),
-    url(../fonts/DMSans-Italic.woff) format("woff");
+  src: url(../fonts/DMSans-Italic.woff2) format('woff2'),
+    url(../fonts/DMSans-Italic.woff) format('woff');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  width: 100%;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -36,7 +41,6 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   width: 100%;
   max-width: 365px;
   padding-left: 15px;
@@ -46,9 +50,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 734px;
-    
   }
-  
 }
 
 @media screen and (min-width: 1280px) {
@@ -68,7 +70,7 @@ body {
 }
 
 .title-tail {
-  color: #4F2EE8;
+  color: #4f2ee8;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -78,7 +80,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .title {
-
     font-size: 48px;
     font-weight: 700;
     line-height: 1.08333;
