@@ -40,5 +40,5 @@ function createCategoryMarkup(data,lastElement,categoryTitle) {
     const containerForBooks = `<ul class="js-cont-for-books">${bookByGenre}</ul>`
     refs.bookEl.innerHTML = titleSection + containerForBooks;
 }
-
+export { createCategoryMarkup };  
 
