@@ -30,4 +30,4 @@ function createCategoryMarkup(data,selectedCategory) {
     refs.bookEl.innerHTML = titleSection + containerForBooks;
 }
 
-export { createCategoryMarkup };
+export { createCategoryMarkup };   
