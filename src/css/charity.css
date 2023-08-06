@@ -88,11 +88,8 @@
 
 @media screen and (min-width: 768px) {
   .container-wrapper {
-    
     height: 292px;
-   
     margin-top: 42px;
-    
   }
   .charity-wrap{
     height: 474px;
