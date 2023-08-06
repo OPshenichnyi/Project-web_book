@@ -1,7 +1,6 @@
 import { getBookByCategory } from "./api";
 import Notiflix from 'notiflix';
 
-
 const refs = {
     categoriesContEl: document.querySelector('.category__list'),
     bookEl: document.querySelector('.book_cards')

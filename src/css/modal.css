@@ -163,7 +163,7 @@
 
         .close__icon {
             width: 28px;
-            /* height: 28px; */
+            height: 28px;
             stroke: #111111;
             fill: #f6f6f6;
             transition-property: fill;

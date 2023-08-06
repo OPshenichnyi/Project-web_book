@@ -1,7 +1,6 @@
 import { FetchBooks } from './fetchBooks';
 import { renderBookInfo } from './modalRendering';
 
-
 const books = document.querySelector('.top-books');
 if (books) {
   books.addEventListener('click', async event => {
@@ -10,7 +9,7 @@ if (books) {
       return;
     }
 
-    const bookId = bookCard.getAttribute('data-book-id');
+    const bookId = bookCard.getAttribute('_id');   
     const fetch = new FetchBooks();
     fetch.bookId = bookId;
     const response = await fetch.fetchBookId();
