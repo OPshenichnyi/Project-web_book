@@ -4,4 +4,5 @@ import './js/books';
 import './js/book-by-category';
 import './js/switcher';
 import './js/scroll-up';
+import './js/shopping-list'
 import './js/burger'
