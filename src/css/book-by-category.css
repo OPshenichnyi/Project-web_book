@@ -1,6 +1,6 @@
 .book-by-genre {
   list-style: none;
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .book-title {
@@ -15,6 +15,7 @@
   line-height: 1.125;
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  padding-bottom: 4px;
 }
 
 .contributor {
@@ -24,11 +25,12 @@
   font-weight: 400;
   line-height: 1.166;
   letter-spacing: -0.48px;
+  padding-bottom: 8px;
 }
 
 .last-title-el {
   color: var(--violet);
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.183;
   letter-spacing: -1.92px;
@@ -36,11 +38,11 @@
 
 .js-category-title {
   color: var(--bookname-color);
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1, 083;
   letter-spacing: -1.92px;
-  margin-top: 40px;
+  padding-bottom: 40px;
 }
 
 .img_book {
@@ -53,6 +55,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+  }
+  .book-by-genre {
+    margin-bottom: 0;
   }
 
   .book-by-genre {
