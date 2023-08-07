@@ -1,11 +1,13 @@
-import { getAllBooks, getBookByCategory } from './api'
-import{createCategoryMarkup, onClick} from './book-by-category'
+import { getAllBooks} from './api'
+import{onClick} from './book-by-category'
 const refs = {
   categoriesContEl: document.querySelector(".categories"),
   bookEl: document.querySelector(".book_cards"),
   seeMore: document.querySelector('.js-btn-category'),
-  allCategoryies: document.querySelector('.category_title')
+  allCategoryies: document.querySelector('.category_title'),
+  startCategory: document.querySelector('.charity-wrap')
 }
+
 refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
 
 rendeCategory()
@@ -44,10 +46,15 @@ function clickSeeMore(e) {
   const selectCategory = e.target.id;
   if (btnChek === 'SEE MORE') {
     onClick(selectCategory);
-      refs.bookEl.removeEventListener('click', (e) => {clickSeeMore(e.target.textContent, e.target.id)});
+    scrollUpSection();
+    refs.bookEl.removeEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id) });
+    
   }
 }
 
+function scrollUpSection() {
+  refs.bookEl.scrollIntoView({ block: "start", behavior: "smooth" });
+}
 
 refs.allCategoryies.addEventListener('click', () => cleanSectionBook())
 
