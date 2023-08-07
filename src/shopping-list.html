@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,67 +19,36 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/shopping-list.css" />
   </head>
   <body>
     <!-- HEADER -->
-
-    <header class="header">
-      <div class="container container-header">
-        <a href="/src/index.html" class="logo-link"
-          ><svg class="icon">
-            <use href="/src/images/icons.svg#icon-logo"></use>
-          </svg>
-          <span class="logo-text">Bookshelf</span>
-        </a>
-
-        <div class="buttons-wrapper">
-          <input type="checkbox" id="switch" /><label for="switch"
-            >Toggle</label
-          >
-          <button class="burger-button">
-            <svg class="burger-icon">
-              <use href="./images/icons.svg#icon-burger"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </header>
+    <include src="./partials/header.html"></include>
 
     <!-- shopping-list -->
-    <main>
-      <section class="section">
-        <div class="container shopping-list">
-          <h1 class="title">Shopping <span class="title-tail">List</span></h1>
-          <p class="shopping-text">
-            This page is empty, add some books and proceed to order.
-          </p>
-          <img
-            src="./images/shopping-list.png"
-            alt="three books"
-            width="265"
-            height="198"
-          />
+    <section class="section">
+        <div class="container shop-container">
+          <!-- <div class="charity-wrap shop-charity visually-hidden">
+            <h3 class="title-charity">Support Ukraine<span class="svg-container"></span></h3>
+            <ul class="container-wrapper"></ul>
+            <button id="scroll-down" class="show-button">
+              <svg class="svg-charity">
+                <use href="./images/icons.svg#icon-down-charity"></use>
+              </svg>
+            </button>
+          </div> -->
+          <div>
+            <h1 class="title">Shopping <span class="title-tail">List</span></h1>
+            <ul class="js-list shopping-list"></ul>
+            <div class="shopping-empty">
+              <p class="shopping-text">This page is empty, add some books and proceed to order.</p>
+              <img class="shop-empty-img" src="./images/shopping-list.png" alt="three books" />
+              
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <!-- Паггінація -->
-    <ul class="button-list">
-      <li>
-        <button type="button">1</button>
-      </li>
-      <li>
-        <button type="button">2</button>
-      </li>
-      <li>
-        <button type="button">...</button>
-      </li>
-      <li>
-        <button type="button">></button>
-      </li>
-      <li>
-        <button type="button">>></button>
-      </li>
-    </ul>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
