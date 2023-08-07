@@ -1,9 +1,12 @@
 .header {
+  z-index: 1000;
+  position: fixed;
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   border: 2px solid var(--header-outline);
+  background: var(--bgc);
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -50,6 +53,10 @@
 }
 
 .navigation {
+  display: none;
+}
+
+.user-button {
   display: none;
 }
 
@@ -158,6 +165,7 @@ input:checked + label:after {
   }
 
   .user-button {
+    display: block;
     margin-left: 24px;
     width: 184px;
     height: 45px;
