@@ -120,11 +120,17 @@ input:checked + label:after {
     padding: 8px;
   } */
 
-  .navigation-item:hover,
-  .navigation-item:focus,
-  .navigation-item:active,
+  .nav-link {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.28;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+  }
+
   .navigation-item.active {
-    padding: 8px;
+    padding: 8px 16px;
     border-radius: 36px;
     background: #eac645;
   }
@@ -133,7 +139,7 @@ input:checked + label:after {
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    width: 198px;
+    width: 206px;
     height: 34px;
     gap: 16px;
     color: var(--bookname-color);
@@ -145,6 +151,7 @@ input:checked + label:after {
   }
 
   .nav-item-div {
+    width: 120px;
     display: flex;
     align-items: center;
   }
@@ -161,7 +168,7 @@ input:checked + label:after {
   }
 
   .buttons-wrapper {
-    margin-left: 101px;
+    margin-left: 90px;
   }
 
   .user-button {
