@@ -54,7 +54,7 @@
 }
 
 .title-charity {
-  color: var(--white-bgc);
+  color: var(--white);
   font-size: 22px;
   font-weight: 700;
   line-height: 1.1;
@@ -64,7 +64,7 @@
 }
 
 .number {
-  color: var(--white-bgc);
+  color: var(--white);
   font-weight: 400;
   line-height: 1.285;
   letter-spacing: -0.56px;
@@ -75,7 +75,7 @@
   height: 32px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: var(--white-bgc);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
