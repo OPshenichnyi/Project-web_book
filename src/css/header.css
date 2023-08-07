@@ -211,3 +211,13 @@ input:checked + label:after {
     margin-left: 4px;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .navigation {
+    margin-left: 76px;
+  }
+
+  .buttons-wrapper {
+    margin-left: auto;
+  }
+}

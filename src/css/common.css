@@ -66,28 +66,26 @@ body {
     margin-right: auto;
     gap: 32px;
   }
-.sidebar {
-  padding-left: unset;
-  padding-right: unset;
-}
+  .sidebar {
+    padding-left: unset;
+    padding-right: unset;
+  }
 
-
-.categories {
-  height: 472px;
-}
-.title-tail {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.08333;
-  /* 108.333% */
-  letter-spacing: -1.92px;
-}
-
+  .categories {
+    height: 472px;
+  }
+  .title-tail {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08333;
+    /* 108.333% */
+    letter-spacing: -1.92px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1206px;
+    max-width: 1392px;
   }
 }
 
@@ -109,4 +107,3 @@ body {
   line-height: 1.1875;
   letter-spacing: -1.28px;
 }
-
