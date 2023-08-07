@@ -1,0 +1,22 @@
+.btn-up {
+    position: fixed;
+    right: 20px;
+    bottom: 140px;
+    background-color: var(--violet);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    outline: 5px solid rgba(79, 46, 232, 0.30);
+}
+.svg-scroll {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+}
+.btn-up_hide {
+    display: none;
+}

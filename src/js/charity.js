@@ -96,7 +96,7 @@ const charitys = [
               <span class="number">${(index + 1).toString().padStart(2, "0")}</span>
               <span class="list-charity">
                   <a  href="${url}" target="_blank">
-                      <img class="images-charity" srcset="${img} 1x, ${img2x} 2x" src="${img}" alt="${title}" loading="lazy" height="32">
+                      <img class="images-charity" srcset="${img} 1x, ${img2x} 2x" src="${img}" alt="${title}" loading="lazy">
                   </a>
               </span>
           `;
