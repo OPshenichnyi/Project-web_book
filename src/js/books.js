@@ -8,6 +8,7 @@ const refs = {
 }
 
 rendeCategory()
+refs.bookEl.insertAdjacentHTML ('beforeend','<h1>Best Sellers <span>Books</span></h1>');
 
 function rendeCategory() {
   getAllBooks().then(data => createList(data))
@@ -19,7 +20,6 @@ function createList(data) {
 
 function markupBookCart(category, arrBook) {
   let titleSection = `<h2 class="js-name-category">${category}</h2>`;
-  refs.bookEl.insertAdjacentHTML ('beforeend','<h1>Best Sellers <span>Books</span></h1>');
   
   const book = arrBook.map(e => `<li class="js-item-book">
             <img class="img-book" src="${e.book_image}" alt="">
@@ -53,5 +53,6 @@ refs.allCategoryies.addEventListener('click', () => cleanSectionBook())
 
 function cleanSectionBook() {
   refs.bookEl.innerHTML = '';
+  refs.bookEl.insertAdjacentHTML ('beforeend','<h1>Best Sellers <span>Books</span></h1>');
    rendeCategory()
 }

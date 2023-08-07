@@ -27,10 +27,13 @@ h1 span {
 
 .img-book {
   width: 335px;
+  height: 400px;
 }
+
 .js-item-book:nth-last-child(-n + 4) {
   display: none;
 }
+
 .js-title-book {
   padding-top: 14px;
 }
@@ -93,10 +96,26 @@ h1 span {
   .js-item-book:nth-last-child(-n + 2) {
     display: block;
   }
+    .js-list-books-category {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+  
+    .js-item-book {
+      flex-basis: calc((100% - 50px) / 3);
+    }
 }
 
 @media screen and (min-width: 1280px) {
   .js-item-book:nth-last-child(-n + 4) {
     display: block;
   }
+    .js-list-books-category {
+      gap: 24px;
+    }
+  
+    .js-item-book {
+      flex-basis: calc((100% - 96px) / 5);
+    }
 }
