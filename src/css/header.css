@@ -8,6 +8,7 @@
   border: 2px solid var(--header-outline);
   background: var(--bgc);
   border-radius: 0px 0px 8px 8px;
+  transition: var(--default-transition);
 }
 
 .container-header {
@@ -209,5 +210,15 @@ input:checked + label:after {
   .info-icon {
     fill: var(--white);
     margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .navigation {
+    margin-left: 76px;
+  }
+
+  .buttons-wrapper {
+    margin-left: auto;
   }
 }
