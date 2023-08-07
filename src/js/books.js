@@ -6,6 +6,7 @@ const refs = {
   seeMore: document.querySelector('.js-btn-category'),
   allCategoryies: document.querySelector('.category_title')
 }
+refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
 
 rendeCategory()
 
@@ -19,13 +20,12 @@ function createList(data) {
 
 function markupBookCart(category, arrBook) {
   let titleSection = `<h2 class="js-name-category">${category}</h2>`;
-  refs.bookEl.insertAdjacentHTML ('beforeend','<h1>Best Sellers <span>Books</span></h1>');
   
   const book = arrBook.map(e => `<li class="js-item-book">
-            <img class="img-book" src="${e.book_image}" alt="">
+            <img class="img_book" src="${e.book_image}" alt="">
             <div class="js-title-book">
-            <h3 class="js-name-book">${e.title}</h3>
-            <p class="js-contributor-book">${e.contributor}</p>
+            <h3 class="book-name">${e.title}</h3>
+            <p class="contributor">${e.contributor}</p>
             </div>
         </li>`)
     .join('')
@@ -53,5 +53,6 @@ refs.allCategoryies.addEventListener('click', () => cleanSectionBook())
 
 function cleanSectionBook() {
   refs.bookEl.innerHTML = '';
+  refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
    rendeCategory()
 }
