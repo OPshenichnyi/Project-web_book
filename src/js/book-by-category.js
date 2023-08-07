@@ -6,11 +6,11 @@ const refs = {
     bookEl: document.querySelector('.book_cards')
 }
 
-refs.categoriesContEl.addEventListener('click', onClick)
+refs.categoriesContEl.addEventListener('click', (e=>{onClick(e.target.textContent)}))
 
 function onClick(evt) {
 
-    const currentCategory = evt.target.textContent;
+    const currentCategory = evt;
     const arrayCurrentCategory = currentCategory.split(' ')
     const lastElement = arrayCurrentCategory.pop()
     const categoryTitle = arrayCurrentCategory.join(' ')   
@@ -39,5 +39,5 @@ function createCategoryMarkup(data,lastElement,categoryTitle) {
     const containerForBooks = `<ul class="js-cont-for-books">${bookByGenre}</ul>`
     refs.bookEl.innerHTML = titleSection + containerForBooks;
 }
-
+export { createCategoryMarkup, onClick };  
 

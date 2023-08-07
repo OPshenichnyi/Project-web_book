@@ -1,14 +1,25 @@
 .categories {
-  width: 307px;
-  height: 472px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 230px;
   overflow: auto;
+}
+
+.categories::-webkit-scrollbar {
+  width: 8px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+  height: 114px;
+  border-radius: 12px;
+  background-color: var(--scroller-color);
 }
 
 .category_list {
   cursor: pointer;
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--gray);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.3;
   letter-spacing: -0.02em;
   padding: 0;
@@ -28,7 +39,7 @@
 
 .category_title {
   cursor: pointer;
-  color: rgba(17, 17, 17, 0.6);
+  color: var(--gray);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
@@ -48,7 +59,8 @@
 
 .category__list .category_list.active,
 .category_title.active {
-  background-color: white;
-  color: #4f2ee8;
+  background-color: var(--bgc);
+  color: var(--hover);
   font-weight: 700;
+  transition: var(--default-transition);
 }

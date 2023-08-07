@@ -3,6 +3,7 @@
   height: 352px;
   max-width: 335px;
   padding-top: 28px;
+  margin-bottom: 40px;
   border-radius: 16px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
@@ -15,14 +16,13 @@
 .container-wrapper {
   width: 160px;
   height: 188px;
-  position: absolute;
   margin-top: 44px;
   overflow: hidden;
+  margin-left: 40px;
 }
 
 .content {
   scroll-behavior: smooth;
-  height: 32px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -44,16 +44,18 @@
 
 .images-charity {
   filter: brightness(0) invert(1);
-  max-height: 100%;
+  height: 32px;
+ 
 }
 
 .list-charity {
+ 
   list-style: none;
-  margin-left: 16px;
+  margin-left: 14px;
 }
 
 .title-charity {
-  color: var(--white-bgc);
+  color: var(--white);
   font-size: 22px;
   font-weight: 700;
   line-height: 1.1;
@@ -63,11 +65,10 @@
 }
 
 .number {
-  color: var(--white-bgc);
+  color: var(--white);
   font-weight: 400;
   line-height: 1.285;
   letter-spacing: -0.56px;
-  margin-left: 40px;
 }
 
 .show-button {
@@ -75,7 +76,7 @@
   height: 32px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: var(--white-bgc);
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;

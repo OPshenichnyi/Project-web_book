@@ -1,31 +1,62 @@
-:root {
+:root[data-theme='light'] {
   --when-modal-book-open-bgc: rgba(17, 17, 17, 40);
   /* колір бекграунду коли відкрита модалка */
   --all-categories-menu-gray: rgba(17, 17, 17, 60);
   /*колір шрифта категорій в меню All Categories*/
-  --all-categories-menu-dark-theme-white: rgba(255, 255, 255, 60);
-  /* колір шрифта категорій в меню All Categories при темній темі сайту */
   --scroller-color: #e0e0e0;
   /* Колір скроллера в секції All Categories */
-  --black-logotype-bookshelf: #000000;
+  --logotype-bookshelf: #000000;
   /* Колір логотипу для білої теми сайту */
-  --white-logotype-bookshelf: #f3f3f3;
-  /* Колір логотипу для темної теми сайту */
-  --black-first-color: #111111;
+  --header-outline: #111;
+  --black-first-color: #fff;
   /* Колір тексту для білої теми */
   /* Колір що використовується в більшості: Назвах категорій в найбільшій секції Home, назвах книг, кнопках, контурі Header */
-  --black-second-color-bgc: #202024;
-  /* Колір бекграунду для темної теми */
   --violet: #4f2ee8;
   /* Колір обводки кнопок See More, частини назв категорій у найбільшій секції Home та кнопки юзера в Header */
   --yellow: #eac645;
   /* Колір відображення, на якій сторінці зараз юзер, кнопки переходу на наступну сторінку в Shopping List та hover у темній темі */
   /* Та ховер на книжку */
-  --white-bgc: #ffffff;
+  --bgc: #ffffff;
   /* Колір бекграунду для білої теми */
   --gray: #b4afaf;
   /* Колір імен авторів книжок */
+  --white: #fff;
+  /*Для білих елементів*/
+  --bookname-color: #111;
+  --hover: #4f2ee8;
+}
 
+:root[data-theme='dark'] {
+  --when-modal-book-open-bgc: rgba(17, 17, 17, 40);
+  /* колір бекграунду коли відкрита модалка */
+  --all-categories-menu-gray: rgba(255, 255, 255, 60);
+  /*колір шрифта категорій в меню All Categories*/
+  --scroller-color: rgba(17, 17, 17, 60);
+  /* Колір скроллера в секції All Categories */
+  --logotype-bookshelf: #f3f3f3;
+  /* Колір логотипу для темної теми сайту */
+  --header-outline: #fff;
+  --black-first-color: #111111;
+  /* Колір тексту для темної теми */
+  /* Колір що використовується в більшості: Назвах категорій в найбільшій секції Home, назвах книг, кнопках, контурі Header */
+  --violet: #4f2ee8;
+  /* Колір обводки кнопок See More, частини назв категорій у найбільшій секції Home та кнопки юзера в Header */
+  --yellow: #eac645;
+  /* Колір відображення, на якій сторінці зараз юзер, кнопки переходу на наступну сторінку в Shopping List та hover у темній темі */
+  /* Та ховер на книжку */
+  --bgc: #202024;
+  /* Колір бекграунду для білої теми */
+  --gray: #b4afaf;
+  /* Колір імен авторів книжок */
+  --white: #fff;
+  --bookname-color: #fff;
+  --hover: #eac645;
+}
+
+:root {
+  --default-transition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    fill 0.3s ease-in-out, transform 0.3s ease-in-out;
   /*На випадок якщо вистачить часу на авторизацію*/
   --modal-signin-gray: rbga(17, 17, 17, 50);
   /*Колір Sign In в модалці реєстрації*/
