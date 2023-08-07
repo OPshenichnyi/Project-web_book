@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  border: 2px solid var(--black-first-color);
+  border: 2px solid var(--header-outline);
   border-radius: 0px 0px 8px 8px;
 }
 
@@ -23,6 +23,10 @@
   align-items: center;
   gap: 8px;
   height: 28px;
+}
+
+.logo-text {
+  color: var(--logotype-bookshelf);
 }
 .icon {
   width: 24px;

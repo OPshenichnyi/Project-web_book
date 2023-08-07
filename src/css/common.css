@@ -35,7 +35,8 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
-  background-color: var(--white-bgc);
+  background-color: var(--bgc);
+  transition: var(--default-transition);
 }
 
 .container {
