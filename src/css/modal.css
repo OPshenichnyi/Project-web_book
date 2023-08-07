@@ -45,7 +45,7 @@
     background-color: #ffffff;
     border: none;
 }
-
+.close__icon{}
 .book-info {
     display: flex;
     flex-direction: column;
