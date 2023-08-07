@@ -65,3 +65,17 @@
   font-weight: 700;
   transition: var(--default-transition);
 }
+
+
+@media screen and (min-width: 768px)  {
+
+  .categories {
+    height: 472px;
+    width: 329px;
+  }
+
+
+
+
+
+}
