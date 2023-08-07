@@ -1,5 +1,5 @@
 /*Connecting all .css files here!*/
-@import url(./common.css);
+
 @import url(./reset.css);
 @import url(./variables.css);
 @import url(./header.css);
@@ -10,3 +10,4 @@
 @import url(./books.css);
 @import url(./book-by-category.css);
 @import url(./scroll-up.css);
+@import url(./common.css);
