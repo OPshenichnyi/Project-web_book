@@ -1,26 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const burgerMenu = document.querySelector(".burger-mobile-header-itemu");
-//   const navLinks = document.querySelector(".nav-links");
-
-//   burgerMenu.addEventListener("click", function () {
-//     navLinks.classList.toggle("active");
-//   });
-// });
-
-
-
-//   document.addEventListener("DOMContentLoaded", function() {
-//     var currentPage = window.location.pathname; // Получаем текущий URL-адрес
-
-//     var menuItems = document.querySelectorAll(".burger-mobile-header-link"); // Выбираем все пункты меню
-
-//     // Проходимся по всем пунктам меню и добавляем класс "active" к соответствующему пункту
-//     menuItems.forEach(function(item) {
-//       if (item.getAttribute("href") === currentPage) {
-//         item.classList.add("active");
-//       }
-//     });
-//   });
 
 
 // Получаем текущий путь страницы (например, /about.html)
