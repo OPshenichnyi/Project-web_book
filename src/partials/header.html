@@ -7,7 +7,23 @@
         </svg>
         <span class="logo-text">Bookshelf</span>
       </a>
-
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="/src/index.html" class="active">HOME</a>
+          </li>
+          <li class="navigation-item">
+            <div class="nav-item-div">
+              <a href="/src/shopping-list.html" class="nav-link"
+                >SHOPPING LIST
+                <svg class="item-icon">
+                  <use href="/src/images/icons.svg#icon-shopping_bag"></use>
+                </svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
       <div class="buttons-wrapper">
         <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
         <button class="burger-button">
@@ -25,6 +41,24 @@
               d="M19.833 11.667H3.5M24.5 7h-21M24.5 16.333h-21M19.833 21H3.5"
             />
           </svg>
+        </button>
+        <button type="button" class="user-button">
+          <div class="user-info">
+            <div class="user-logo">
+              <svg
+                class="user-icon"
+                width="19"
+                height="19"
+                fill="var(--violet)"
+              >
+                <use href="/src/images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+            <p class="username">Stephen</p>
+            <svg width="14" height="26" class="info-icon">
+              <use href="/src/images/icons.svg#icon-caret-down"></use>
+            </svg>
+          </div>
         </button>
       </div>
     </div>
