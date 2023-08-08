@@ -34,5 +34,5 @@ function setTheme() {
   currentTheme.setAttribute('data-theme', deviceTheme);
   switcher.checked = deviceTheme === 'dark';
 }
-
+// chicks
 window.addEventListener('load', setTheme);
