@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page title</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-  <script type="module" src="./index.js"></script>
-</head>
-
-<body>
-  <include src="./partials/header.html"></include>
-  <div class="main-wrapper">
-  <div class="wrapper-sidebar">
-  <include src="./partials/categories.html"></include>
-  <include src="./partials/charity.html"></include>
-</div>
-<include src="./partials/burger.html"></include>
-  <include src="./partials/books.html"></include>
-  <include src="./partials/book-by-category.html"></include>
-</div>
-  <div class="btn-up btn-up_hide"><svg class="svg-scroll">
-    <use href="/src/images/icons.svg#icon-scroll_up"></use>
-  </svg></div>
-</body>
-
+  <body>
+    <include src="./partials/header.html"></include>
+    <div class="main-wrapper">
+      <div class="wrapper-sidebar">
+        <include src="./partials/categories.html"></include>
+        <include src="./partials/charity.html"></include>
+      </div>
+      <include src="./partials/burger.html"></include>
+      <include src="./partials/books.html"></include>
+      <include src="./partials/book-by-category.html"></include>
+    </div>
+    <div class="btn-up btn-up_hide">
+      <svg class="svg-scroll">
+        <use href="/src/images/icons.svg#icon-scroll_up"></use>
+      </svg>
+    </div>
+  </body>
 </html>
