@@ -43,12 +43,7 @@
 }
 
 .burger-button {
-  width: 28px;
-  height: 28px;
   margin-left: 14px;
-  background-image: url(/src/images/icons_by_one/burger.svg);
-  filter: var(--burger);
-  stroke: var(--white);
 }
 
 .burger-icon {
