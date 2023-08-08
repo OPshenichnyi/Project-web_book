@@ -158,3 +158,5 @@ menuLinks.forEach(link => {
     } 
   
 });
+
+export { createMarkup };

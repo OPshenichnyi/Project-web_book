@@ -50,6 +50,27 @@
   /* height: 485px; */
 }
 
+
+
+
+
+
+.modal-book-item{
+  max-width: 335px;
+  max-height: 762px;
+}
+
+.modal-img{
+  max-width: 287px;
+}
+.add-book{
+  display: inline-flex;
+    padding: 14px 28px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 40px;
+      border: 2px solid #4F2EE8;
+}
 @media screen and (min-width: 768px) {
   .js-cont-for-books {
     display: flex;
@@ -83,5 +104,14 @@
     height: 256px;
   }
 
+
+}
+
+.modal-book{
+  max-width: 335px;
+  max-height: 762px;
+}
+
+.modal-book-card{
 
 }
