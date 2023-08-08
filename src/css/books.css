@@ -35,7 +35,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.28px;
+  line-height: 1.28;
   letter-spacing: 0.42px;
   text-transform: uppercase;
   padding-bottom: 18px;
@@ -73,7 +73,7 @@ flex-basis: calc((100% - 96px) / 5);
 .js-list-books-category {
   margin-bottom: 32px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 24px;
 }
 }

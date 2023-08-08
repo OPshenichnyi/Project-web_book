@@ -48,6 +48,14 @@ body {
   padding-right: 20px;
 }
 
+.wrapper-sidebar {
+  margin-top: 104px;
+}
+
+.sidebar {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 734px;
@@ -64,11 +72,15 @@ body {
     width: 704px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 137px;
     gap: 32px;
+    height: 474px;
+    margin-bottom: 98px;
   }
 .sidebar {
   padding-left: unset;
   padding-right: unset;
+  margin-bottom: unset;
 }
 
 
@@ -89,6 +101,25 @@ body {
   .container {
     max-width: 1206px;
   }
+.main-wrapper {
+  display: flex;
+}
+.wrapper-sidebar {
+  display: unset;
+  width:unset;
+}
+.book-list {
+  margin-top: 137px;
+  
+}
+.sidebar {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.book_cards{
+  margin-left: 40px;
+}
+
 }
 
 .title {

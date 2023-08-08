@@ -40,14 +40,14 @@
   color: var(--bookname-color);
   font-size: 32px;
   font-weight: 700;
-  line-height: 1, 083;
+  line-height: 1.083;
   letter-spacing: -1.92px;
   padding-bottom: 40px;
 }
 
 .img_book {
-  width: 320px;
-  height: 400px;
+  width: 335px;
+  /* height: 485px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -63,6 +63,11 @@
   .book-by-genre {
     flex-basis: calc((100% - 50px) / 3);
   }
+  .img_book{
+    width: 216px;
+    height: 316px;
+  }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -73,4 +78,10 @@
   .book-by-genre {
     flex-basis: calc((100% - 96px) / 5);
   }
+  .img_book{
+    width: 180px;
+    height: 256px;
+  }
+
+
 }
