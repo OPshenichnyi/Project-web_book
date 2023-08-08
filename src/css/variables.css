@@ -1,7 +1,7 @@
 :root[data-theme='light'] {
   --when-modal-book-open-bgc: rgba(17, 17, 17, 40);
   /* колір бекграунду коли відкрита модалка */
-  --all-categories-menu-gray: rgba(17, 17, 17, 60);
+  --all-categories-menu-gray: rgba(17, 17, 17, 0.6);
   /*колір шрифта категорій в меню All Categories*/
   --scroller-color: #e0e0e0;
   /* Колір скроллера в секції All Categories */
@@ -29,7 +29,7 @@
 :root[data-theme='dark'] {
   --when-modal-book-open-bgc: rgba(17, 17, 17, 40);
   /* колір бекграунду коли відкрита модалка */
-  --all-categories-menu-gray: rgba(255, 255, 255, 60);
+  --all-categories-menu-gray: rgba(255, 255, 255, 0.6);
   /*колір шрифта категорій в меню All Categories*/
   --scroller-color: rgba(17, 17, 17, 60);
   /* Колір скроллера в секції All Categories */
