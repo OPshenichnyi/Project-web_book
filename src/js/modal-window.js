@@ -1,16 +1,13 @@
 import {  getBookById } from "./api";
 
 const refs = {
-    categoriesContEl: document.querySelector('.category__list'),
     bookEl: document.querySelector('.book_cards'),
     bookCard: document.querySelector('.js-cont-for-books'),
     backdrop: document.querySelector('.backdrop'),
     modalCard: document.querySelector('.modal-book-item'),
+    btnClose: document.querySelector('.modal-close-btn')
     
 }
-
-
-refs.categoriesContEl.addEventListener('click', (e => { onClick(e.target.textContent) }))
 
 refs.backdrop.addEventListener('click', (e) => {
     if (e.target.dataset.modal !== 'open') {
@@ -20,31 +17,24 @@ refs.backdrop.addEventListener('click', (e) => {
     }
     
 })
-  
 
-// function createCategoryMarkup(data,lastElement,categoryTitle) {
-//     const titleSection = `<h2 class="js-category-title">${categoryTitle} <span class ="last-title-el">${lastElement}</span></h2>`
-//     refs.bookEl.addEventListener('click', (e => {
-//         if (e.target.tagName !== 'IMG') {
-//             return
-//         }
-//         refs.backdrop.classList.remove("is-hidden"), 
-//         getBookById(e.target.alt).then(data => { createMarkup(data) })
-        
-//  }));
-//   const bookByGenre =  data.map(({ book_image, title, contributor, _id }) => `<li class = "book-by-genre" >
-//             <img class ="img_book" src="${book_image}" alt="${_id}">
-//             <div class = book-title>
-//             <h3 class ="book-name">${title}</h3>
-//             <p class ="contributor">${contributor}</p>
-//             </div>
-//         </li>`).join(' ')
-//     const containerForBooks = `<ul class="js-cont-for-books">${bookByGenre}</ul>`
-//     refs.bookEl.innerHTML = titleSection + containerForBooks;
-    
-// }
-
-
+// Функція викликає модальне вікно дає запит на на АРІ та запускає рендер карточки
+function addEventlisImg() {
+    refs.bookEl.addEventListener('click', (e => {
+        if (e.target.tagName !== 'IMG') {
+            return
+        }
+        refs.btnClose.addEventListener('click', (e) => {
+            console.log(e);
+            refs.backdrop.classList.add("is-hidden");
+        })
+        refs.backdrop.classList.remove("is-hidden");
+        getBookById(e.target.alt).then(data => { createMarkup(data) });
+        refs.modalCard.addEventListener('click', (e => {
+            // console.dir(e.target.nodeName);
+        }))
+ }));
+}
 
 // Функція відмальовує карточку модального вікна 
 function createMarkup(arr) {
@@ -79,10 +69,8 @@ function createMarkup(arr) {
         <button type="button" class="add-book">ADD TO SHOPPING LIST</button>
   </div>`
     refs.modalCard.innerHTML = bookCardHtml;
-    refs.modalCard.addEventListener('click', (e=>{console.dir(e.target.nodeName);}))
+    
 }
 
 
-
-export { createCategoryMarkup, onClick };  
-
+export{addEventlisImg}
