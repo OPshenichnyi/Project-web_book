@@ -1,4 +1,7 @@
-import {getBookById } from "./api";
+import { getBookByCategory,  getBookById } from "./api";
+import Notiflix from 'notiflix';
+
+
 
 const refs = {
     categoriesContEl: document.querySelector('.category__list'),
@@ -102,5 +105,4 @@ function createMarkup(arr) {
 
 
 export { createCategoryMarkup, onClick };  
-
 
