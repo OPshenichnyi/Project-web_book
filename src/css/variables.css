@@ -24,6 +24,7 @@
   /*Для білих елементів*/
   --bookname-color: #111;
   --hover: #4f2ee8;
+  --burger: brightness(0);
 }
 
 :root[data-theme='dark'] {
@@ -51,6 +52,7 @@
   --white: #fff;
   --bookname-color: #fff;
   --hover: #eac645;
+  --burger: brightness(0) invert();
 }
 
 :root {
