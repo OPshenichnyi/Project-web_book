@@ -1,4 +1,11 @@
 @import url(./variables.css);
+
+.header {
+   
+    position: relative;
+    margin-bottom: 0px;
+  }
+
 /* ===========COMMON================== */
 .button-list {
     display: flex;
