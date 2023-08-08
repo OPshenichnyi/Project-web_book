@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping List</title>
+    <title>Bookshelf</title>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +23,74 @@
   </head>
   <body>
     <!-- HEADER -->
-    <include src="./partials/header.html"></include>
+    <header class="header">
+      <div class="container">
+        <div class="container-header">
+          <a href="/src/index.html" class="logo-link"
+            ><svg class="icon">
+              <use href="/src/images/icons.svg#icon-logo"></use>
+            </svg>
+            <span class="logo-text">Bookshelf</span>
+          </a>
+          <nav class="navigation">
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a href="/src/index.html" class="nav-link">HOME</a>
+              </li>
+              <li class="navigation-item active">
+                <div class="nav-item-div">
+                  <a href="/src/shopping-list.html" class="nav-link"
+                    >SHOPPING LIST
+                    <svg class="item-icon">
+                      <use href="/src/images/icons.svg#icon-shopping_bag"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="buttons-wrapper">
+            <input type="checkbox" id="switch" /><label for="switch"
+              >Toggle</label
+            >
+            <button class="burger-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="none"
+              >
+                <path
+                  stroke="#111"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.833 11.667H3.5M24.5 7h-21M24.5 16.333h-21M19.833 21H3.5"
+                />
+              </svg>
+            </button>
+            <button type="button" class="user-button">
+              <div class="user-info">
+                <div class="user-logo">
+                  <svg
+                    class="user-icon"
+                    width="19"
+                    height="19"
+                    fill="var(--violet)"
+                  >
+                    <use href="/src/images/icons.svg#icon-user"></use>
+                  </svg>
+                </div>
+                <p class="username">Stephen</p>
+                <svg width="14" height="26" class="info-icon">
+                  <use href="/src/images/icons.svg#icon-caret-down"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!-- shopping-list -->
     <main>
