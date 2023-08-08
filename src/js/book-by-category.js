@@ -10,7 +10,7 @@ const refs = {
 refs.categoriesContEl.addEventListener('click', (e=>{onClick(e.target.textContent)}))
 
 function onClick(evt) {
-
+console.log(evt)
     const currentCategory = evt;
     const arrayCurrentCategory = currentCategory.split(' ')
     const lastElement = arrayCurrentCategory.pop()
