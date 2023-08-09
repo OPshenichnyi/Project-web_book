@@ -16,11 +16,7 @@ const refs = {
 
 const PRODUCT_LS_KEY = 'checkout';
 
-
 // Функція викликає модальне вікно дає запит на на АРІ та запускає рендер карточки
-let idBook = []
-
-
 
 
 function addEventlisImg() {
@@ -54,9 +50,11 @@ function addBookShopList(e) {
     if (idBook.includes(e.target.id)) {
         return
     }
+    let idBook = []
+
     idBook.push(e.target.id);
-    console.dir(e.target.id);
-    
+    // idBook = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY)) ?? [];
+    localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(idBook))
 }
 
 
