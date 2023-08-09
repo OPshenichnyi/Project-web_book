@@ -23,7 +23,7 @@ import prytula2x from "../images/charity/prytula_2x.webp";
 
 
 
-const charitys = [
+export const charitys = [
     {
       title: "Save the Children",
       url: "https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis",
@@ -39,7 +39,7 @@ const charitys = [
     {
       title: "UNITED24",
       url: "https://u24.gov.ua/uk",
-      img: united,
+      img: united2x,
       img2x: united2x,
     },
     {
@@ -95,7 +95,7 @@ const charitys = [
       container.innerHTML = `
               <span class="number">${(index + 1).toString().padStart(2, "0")}</span>
               <span class="list-charity">
-                  <a  href="${url}" target="_blank">
+                  <a  href="${url}" target="_blank" rel = "noreferrer" rel = "noopener">
                       <img class="images-charity" srcset="${img} 1x, ${img2x} 2x" src="${img}" alt="${title}" loading="lazy">
                   </a>
               </span>

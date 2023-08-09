@@ -113,11 +113,11 @@ input:checked + label:after {
   .container-header {
     padding: 24px 0;
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: space-around;
   }
 
   .navigation {
-    margin-left: 56px;
+    margin-left: 40px;
     display: flex;
   }
 
@@ -173,7 +173,7 @@ input:checked + label:after {
   }
 
   .buttons-wrapper {
-    margin-left: 90px;
+    margin-left: 101px;
   }
 
   .user-button {
