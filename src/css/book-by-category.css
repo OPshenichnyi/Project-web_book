@@ -64,7 +64,7 @@
     flex-basis: calc((100% - 50px) / 3);
   }
   .img_book{
-    width: 216px;
+    width: 218px;
     height: 316px;
   }
 
@@ -79,7 +79,6 @@
     flex-basis: calc((100% - 96px) / 5);
   }
   .img_book{
-    width: 180px;
     height: 256px;
   }
 

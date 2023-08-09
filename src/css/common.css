@@ -40,6 +40,12 @@ body {
   transition: var(--default-transition);
 }
 
+
+::-webkit-scrollbar {
+  width: 0;
+
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -49,16 +55,27 @@ body {
 }
 
 .wrapper-sidebar {
-  margin-top: 104px;
-}
-
-.sidebar {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
+.sidebar {
+
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.book-list {
+  padding-left: unset;
+  padding-right: unset;
+}
+
+
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 734px;
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .title {
     font-size: 48px;
@@ -72,7 +89,7 @@ body {
     width: 704px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 137px;
+    margin-top: 40px;
     gap: 32px;
     height: 474px;
     margin-bottom: 98px;
@@ -98,9 +115,11 @@ body {
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   .wrapper-sidebar {
-    margin: 40px auto 81px;
+    margin: 40px auto 86px;
   }
   .main-wrapper {
     display: flex;
@@ -111,14 +130,19 @@ body {
   }
   .book-list {
     margin-top: 40px;
-  }
-  .sidebar {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .book_cards {
+    padding-left: unset;
+    padding-right: unset;
     margin-left: 40px;
   }
+  .sidebar {
+    padding-left: unset;
+    padding-right: unset;
+    
+  }
+ 
+
+  
+  
 }
 
 .title {
