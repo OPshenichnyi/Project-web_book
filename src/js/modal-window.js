@@ -14,10 +14,15 @@ const refs = {
     
 }
 
+const PRODUCT_LS_KEY = 'checkout';
 
 
 // Функція викликає модальне вікно дає запит на на АРІ та запускає рендер карточки
 let idBook = []
+
+
+
+
 function addEventlisImg() {
     refs.bookEl.addEventListener('click', (e => {
         if (e.target.tagName !== 'IMG') {
@@ -35,16 +40,26 @@ function addEventlisImg() {
         
         
         refs.modalCard.addEventListener('click', (e => {
-            if (e.target.nodeName !== 'BUTTON') {
-                return;
-            }
-            idBook.push(e.target.id);
-            
-            console.log(idBook);
+            addBookShopList(e)
         }))
         
  }));
 }
+
+// Функція додає прослуховувач на кнопку Add to shopping list
+function addBookShopList(e) {
+    if (e.target.nodeName !== 'BUTTON') {
+                return;
+    }
+    if (idBook.includes(e.target.id)) {
+        return
+    }
+    idBook.push(e.target.id);
+    console.dir(e.target.id);
+    localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(idBook))
+}
+
+
 
 // Функція додає прослуховувач на backdrop та закриває модальне вікно 
 refs.backdrop.addEventListener('click', (e) => {
