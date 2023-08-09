@@ -3,7 +3,15 @@
   } */
   
   @media screen and (max-width: 767px) {
-    
+
+    /* .js-fixed {
+      position: fixed;
+    }
+  */
+
+
+
+
     .burger-mobile-menu {
       display: flex;
       justify-content: center;

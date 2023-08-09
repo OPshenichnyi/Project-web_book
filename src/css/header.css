@@ -42,14 +42,14 @@
   align-items: center;
 }
 
-.burger-button {
+/* .burger-button {
   width: 28px;
   height: 28px;
   filter: var(--burger);
   stroke: var(--white);
   background-image: url(/src/images/icons_by_one/burger.svg);
   margin-left: 14px;
-}
+} */
 
 .burger-icon {
   display: flex;
