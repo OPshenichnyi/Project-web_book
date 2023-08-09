@@ -56,7 +56,7 @@ function addBookShopList(e) {
     }
     idBook.push(e.target.id);
     console.dir(e.target.id);
-    localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(idBook))
+    
 }
 
 
