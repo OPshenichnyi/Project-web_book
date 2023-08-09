@@ -3,7 +3,9 @@
   } */
   
   @media screen and (max-width: 767px) {
-    
+
+
+
     .burger-mobile-menu {
       display: flex;
       justify-content: center;
@@ -21,7 +23,11 @@
         #fff 100%
       );
     }
-  
+   /* .js-fixed {
+      position: fixed;
+    } */
+
+
     .burger-mobile-menu_coteiner {
       position: relative;
       max-width: 375px;
