@@ -4,27 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Shopping-list</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/shopping-list.css" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+
+    <include src="./partials/header.html"></include>
+
+    <!-- <header class="header">
       <div class="container">
         <div class="container-header">
           <a href="/src/index.html" class="logo-link"
@@ -91,7 +80,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- shopping-list -->
     <main>
@@ -109,22 +98,20 @@
             </button>
           </div>
           <div>
+
+            
             <h1 class="title">Shopping <span class="title-tail">List</span></h1>
+
             <ul class="js-list shopping-list"></ul>
             <div class="shopping-empty">
-              <p class="shopping-text">
-                This page is empty, add some books and proceed to order.
-              </p>
-              <img
-                class="shop-empty-img"
-                src="./images/shopping-list.png"
-                alt="three books"
-              />
+              <p class="shopping-text">This page is empty, add some books and proceed to order.</p>
+              <img class="shop-empty-img" src="./images/shopping-list.png" alt="three books" />
             </div>
           </div>
         </div>
       </section>
     </main>
+
     <!-- modal -->
 
     <div class="backdrop is-hidden" data-modal="">
@@ -132,12 +119,14 @@
         <div class="js-modal-item"></div>
 
         <button type="button" class="modal-close-btn" data-modal-close="">
-          <svg class="close-modal-icon" width="8px" height="8px">
-            <use href="./images/icons.svg#icon-close"></use>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+<path stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16 2 2 16M2 2l14 14"></path>
+</svg>
           </svg>
         </button>
       </div>
     </div>
+    
     <include src="./partials/burger.html"></include>
     <script type="module" src="./js/api.js"></script>
     <script type="module" src="./js/shopping-list.js"></script>
