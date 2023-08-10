@@ -10,9 +10,8 @@ burgerBtn.addEventListener('click', function () {
         // header.classList.add('js-fixed')
 burgerBtn.innerHTML=`
 
-<svg class="svg-button" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
+<svg class="svg-button-close svg-button-hover" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none">
 <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16 2 2 16M2 2l14 14"/>
-
 </svg>`;
 
   // Получаем текущую позицию прокрутки
@@ -37,7 +36,7 @@ burgerBtn.innerHTML=`
     // header.classList.remove('js-fixed')
     burgerBtn.innerHTML=`
 
-    <svg class="svg-button" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg class="svg-button svg-button-hover" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
             <path d="M19.8333 11.6667H3.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M24.5 7H3.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M24.5 16.3333H3.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
