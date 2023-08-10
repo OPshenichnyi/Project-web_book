@@ -1,10 +1,4 @@
-/* .burger-mobile-menu {
-    display: none;
-  } */
-  
-  @media screen and (max-width: 767px) {
-
-
+@media screen and (max-width: 767px) {
 
     .burger-mobile-menu {
       display: flex;
@@ -23,10 +17,10 @@
         #fff 100%
       );
     }
-   /* .js-fixed {
-      position: fixed;
-    } */
+   
 
+
+    
 
     .burger-mobile-menu_coteiner {
       position: relative;
@@ -51,8 +45,7 @@
   
     .burger-mobile-menu_name {
       color: #fff;
-      /* font-family: DM Sans; */
-      font-size: 22px;
+       font-size: 22px;
       
       font-weight: 700;
       line-height: normal;
@@ -83,92 +76,12 @@
       background-color: #eac645;
       font-weight: 700;
       color: #111;
-      fill: #111;
-      stroke: #111;
+      
       transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-
-/*////////////////////////// current//////////////////////// */
-    /* .burger-menu_shopping-list {
+    .burger-menu_shopping-list.active {
       fill: #111;
-    } */
-  
-    /* .burger-mobile-header-item > .current {
-      padding: 8px 16px;
-  
-      border-radius: 36px;
-      cursor: pointer;
-      line-height: 1.29;
-      letter-spacing: -0.56px;
-      background-color: #eac645;
-      font-weight: 700;
-      color: #111;
-      fill: #111;
-      stroke: #111;
-      transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-    } */
-  
-    /* .burger-mobile-header-link {
-      text-decoration: none;
-      color: #000;
-    } */
-    /*////////////////////////// current//////////////////////// */
-
-    
-
-    /* .burger-menu .menu-item.active {
-      color: #ff0000;
-    } */
-    /* .current::after {
-      content: ' ';
-  
-      position: absolute;
-      left: 0;
-      bottom: 0;
-  
-      width: 100%;
-      height: 4px;
-  
-      border-radius: 2px;
-  
-      transition: opacity var(--transition-dur-func);
-    } */
-  
-    /* .menu-item.active {
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 5px;
-      background-color: #eac645;
-    } */
-  
-    /* .burger-header-link-first:active {
-      width: 72px;
-      height: 34px;
-  
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      border-radius: 36px;
-      color: #111;
-      background: #eac645;
     }
-    .burger-header-link-second:active {
-      width: 125%;
-      height: 34px;
-  
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      border-radius: 36px;
-      color: #111;
-      background: #eac645;
-      fill: #111;
-      stroke: #111;
-    } */
-
 
   
     .burger-menu_shopping-list {
@@ -239,9 +152,6 @@
     width:  calc(150vh + 75px);
     height: calc(150vh + 64px);
     left: -63px;
-
-    /* object-fit: cover;
-    background-size:cover; */
 
     z-index: 1;
   }
