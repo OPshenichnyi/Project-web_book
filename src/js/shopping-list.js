@@ -3,6 +3,10 @@ import {  getBookById } from "./api";
 import amazon from "../images/amazon.png";
 import apple from "../images/apple.png";
 import bookshops from "../images/bookshops.png";
+import './shopping-list-active-page'
+import './shopping-list-burger-open'
+
+
 const elements = {
     container: document.querySelector('.js-list'),
     empty: document.querySelector('.shopping-empty'),
@@ -89,11 +93,6 @@ function createMarkup(arr) {
     );
     
 }
-
-
-
-
-
 
 
 
