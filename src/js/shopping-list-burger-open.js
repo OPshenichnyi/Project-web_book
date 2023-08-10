@@ -1,9 +1,10 @@
+
 const hiddebBurgMenu = document.querySelector('.conteiner-hidden');
  const burgerBtn = document.querySelector('.burger-button');
  const header =  document.querySelector('.header')
 
-burgerBtn.addEventListener('click', function () {
-   
+burgerBtn.addEventListener('click', function () {  
+
     if (hiddebBurgMenu.hasAttribute('hidden')) {
 
         hiddebBurgMenu.hidden = false;      
@@ -13,14 +14,15 @@ burgerBtn.innerHTML=`
 <path stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M16 2 2 16M2 2l14 14"/>
 </svg>`;
 
+
   // Получаем текущую позицию прокрутки
   const scrollY = window.scrollY;
   // Сохраняем текущую позицию в стилях элемента body
   document.body.style.position = 'fixed';
   document.body.style.top = `-${scrollY}px`;
-
         return;        
     }
+
 
   // Получаем сохраненное значение позиции прокрутки
   const scrollY = parseInt(document.body.style.top, 10);
@@ -51,4 +53,3 @@ burgerBtn.innerHTML=`
     </svg>`;      
 
      })
-
