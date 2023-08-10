@@ -88,6 +88,8 @@
 }
 .svg-charity {
   fill: var(--violet);
+  height: 20px;
+  width: 20px;
 }
 
 @media screen and (min-width: 768px) {

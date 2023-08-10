@@ -23,10 +23,11 @@
   line-height: 1.3;
   letter-spacing: -0.02em;
   padding: 0;
+  height: 18px;
 }
 
 .category_list:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .category_list:focus,
@@ -45,7 +46,8 @@
   line-height: 1.3;
   letter-spacing: -0.02em;
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  height: 18px;
 }
 
 .category_title:active,

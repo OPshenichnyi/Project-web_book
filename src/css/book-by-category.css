@@ -47,7 +47,7 @@
 
 .img_book {
   width: 335px;
-  /* height: 485px; */
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 768px) {
