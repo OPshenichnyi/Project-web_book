@@ -17,16 +17,20 @@ const elements = {
 const PRODUCT_LS_KEY = 'checkout';
 const products = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY)) || [];
 
+elements.empty.style.visibility = "visible"
 
 
+ 
 
 createListShoping();
 
 function createListShoping() {
-    if (products.length > 0) {
-        elements.empty.innerHTML = ""
+    console.log(products.length < 1);
+    if (products.length < 1) {
+        elements.empty.style.visibility = "visible"
+        elements.container.innerHTML = ``
     }
-
+    elements.empty.style.visibility = "hidden"
     products.map(a => {
         getBookById(a).then(data => {
             createMarkup(data);
@@ -36,16 +40,15 @@ function createListShoping() {
         if (evt.target.nodeName !== 'BUTTON') {
             return
         }
-        console.log(products);
+        
         const IdxRemove = products.indexOf(evt.target.id);
         products.splice(IdxRemove, 1);
-        console.log(products);
+        
         localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(products));
-        elements.container.innerHTML = "";
+        elements.container.innerHTML = ``
         createListShoping();
     }));
-    
-    
+     
 }
 
 
