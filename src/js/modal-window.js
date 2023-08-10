@@ -92,10 +92,10 @@ function createMarkup(arr) {
         <img class="modal-img" src="${book_image}" alt="${title}" />
         <div class="book-info">
         <h2 class="shop-title">${title}</h2>
-        <p class="shop-category">${list_name}</p>
+        <p class="shop-author">${author}</p>  
         <p class="shop-description">${description}</p>
         <div class="shop-wrap">
-        <p class="shop-author">${author}</p>  
+        
         <ul class="shop-link-list">
          <li>
              <a href="${buy_links[0].url}" target="_blank" rel="noreferrer noopener" class="link shop-link-amz">

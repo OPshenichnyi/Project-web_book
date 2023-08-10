@@ -25,6 +25,7 @@
   --bookname-color: #111;
   --hover: #4f2ee8;
   --burger: brightness(0);
+  --modal-shop:grayscale(100%);
 }
 
 :root[data-theme='dark'] {
@@ -53,6 +54,7 @@
   --bookname-color: #fff;
   --hover: #eac645;
   --burger: brightness(0) invert();
+  --modal-shop:brightness(0) invert(1);
 }
 
 :root {
