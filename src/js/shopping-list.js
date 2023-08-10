@@ -20,34 +20,42 @@ const products = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY)) || [];
 elements.empty.style.visibility = "visible"
 
 
+elements.container.addEventListener('click', (evt => {  
+    evt.preventDefault()
+    console.dir(evt.target);
+        if (evt.target.nodeName !== 'BUTTON'){
+            if (evt.target.nodeName !== 'svg') {
+                return
+            }
+        }
+        const IdxRemove = products.indexOf(evt.target.id);
+        products.splice(IdxRemove);
+              
+        elements.container.innerHTML = ``
+        createListShoping();
+    }));
  
+
+
+
 
 createListShoping();
 
 function createListShoping() {
-    console.log(products.length < 1);
-    if (products.length < 1) {
-        elements.empty.style.visibility = "visible"
-        elements.container.innerHTML = ``
+    localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(products));
+    if (products.length === 0) {
+    elements.empty.style.visibility = "visible"   
+        return;
     }
     elements.empty.style.visibility = "hidden"
+
+
     products.map(a => {
         getBookById(a).then(data => {
             createMarkup(data);
         });
     });
-    elements.container.addEventListener('click', (evt => {         
-        if (evt.target.nodeName !== 'BUTTON') {
-            return
-        }
-        
-        const IdxRemove = products.indexOf(evt.target.id);
-        products.splice(IdxRemove, 1);
-        
-        localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(products));
-        elements.container.innerHTML = ``
-        createListShoping();
-    }));
+    
      
 }
 
@@ -65,9 +73,9 @@ function createMarkup(arr) {
         <p class="shop-description">${description}</p>
 
         <button class="js-removeBook shop-dlt-btn" type="button" id="${_id}">
-        <svg class="js-clear icon-trash">
-         <use href="./images/icons_by_one/close.svg"></use>
-      </svg>
+        <svg class="js-clear icon-trash shop-dlt-btn">
+        <use href="./images/icons_by_one/close.svg"></use>
+        </svg>
         </button>
 
         <div class="shop-wrap">
