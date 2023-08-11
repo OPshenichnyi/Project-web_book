@@ -4,6 +4,7 @@
   position: relative;
   margin-bottom: 0px;
 }
+
 /* ===========COMMON================== */
 .button-list {
   display: flex;
@@ -25,9 +26,12 @@
 
 .svg-modal-close {
   stroke: var(--bgc);
-    filter: invert(1);
-    height: 18px;
+  filter: invert(1);
+  height: 18px;
+
 }
+
+
 
 /* ===========MOBILE================== */
 
@@ -39,7 +43,7 @@
   }
 
   .shopping-text {
-    color: rgba(0, 0, 0, 0.60);
+    color: var(--shop-list-txt);
     width: 244px;
     margin-top: 120px;
     text-align: center;
@@ -47,9 +51,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.28571;
-    /* 128.571% */
     letter-spacing: -0.28px;
-
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 14px;
@@ -133,13 +135,13 @@
     overflow: hidden;
     color: var(--bookname-color);
     margin-bottom: 14px;
-    
+
 
     font-size: 14px;
 
     font-weight: 400;
     line-height: 1.28571;
-    
+
     letter-spacing: -0.56px;
     flex-grow: 1;
     word-wrap: break-word;
@@ -147,7 +149,7 @@
 
   .shop-author {
     color: #B4AFAF;
-margin-bottom: 18px;
+    margin-bottom: 18px;
     font-size: 12px;
     font-style: italic;
     font-weight: 400;
@@ -157,7 +159,7 @@ margin-bottom: 18px;
   }
 
   .icon-trash {
-   stroke: #ffffff;
+    stroke: #ffffff;
     width: 16px;
     height: 16px;
   }
@@ -168,22 +170,36 @@ margin-bottom: 18px;
     align-items: center;
   }
 
-.add-book {
-width: 211px;
-height: 46px;
-border-radius: 40px;
-border: 2px solid #4F2EE8;
-position: absolute;
- bottom: 40px;
-left: 62px;
-color: var(--bookname-color);
-font-weight: 700;
-text-transform: uppercase;
-font-size: 14px;
-line-height:1.285;
-letter-spacing: -0.14px;
+  .add-book {
+    width: 211px;
+    height: 46px;
+    border-radius: 40px;
+    border: 2px solid #4F2EE8;
+    position: absolute;
+    bottom: 40px;
+    left: 62px;
+    color: var(--bookname-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.285;
+    letter-spacing: -0.14px;
+    transition: var(--default-transition);
+  }
 
-}
+  .add-book:hover {
+    background-color: #4F2EE8;
+    color: #FFF;
+  }
+
+  .add-book:focus {
+    background-color: #4F2EE8;
+    color: #FFF;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
+
+
+
+  }
 
 
   .shop-wrap {
@@ -221,7 +237,6 @@ letter-spacing: -0.14px;
     width: 33px;
     height: 32px;
     filter: grayscale(100%)
-  
   }
 }
 
@@ -235,14 +250,16 @@ letter-spacing: -0.14px;
   margin-top: unset;
   margin-left: 14px;
 }
+
 .shop-description.basket {
-  
-text-overflow: ellipsis;
-white-space: nowrap;
-width: 193px;
-height: 68px;
-margin-bottom: 16px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 193px;
+  height: 68px;
+  margin-bottom: 16px;
 }
+
 .shop-link-list.basket {
   width: 80px;
   height: 16px;
@@ -251,11 +268,11 @@ margin-bottom: 16px;
 }
 
 .shop-wrap.basket {
-height: 16px;
+  height: 16px;
 }
 
 .shop-author.basket {
-margin-bottom: unset;
+  margin-bottom: unset;
 }
 
 
@@ -263,9 +280,10 @@ margin-bottom: unset;
   width: 32px;
   height: 11px;
 }
+
 .icon-shop.basket {
-width: 16px;
-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 
@@ -361,44 +379,47 @@ height: 16px;
 
   }
 }
-/*!-------basket--768------- */
-@media screen and (min-width:768px){
-.shop-img.basket {
-  width: 116px;
-height: 165px;
-margin-right: unset;
-}
 
-.book-info.basket {
-  margin-left: 24px;
-}
-.shop-title.basket {
-  margin-bottom: 4px;
-}
-.shop-description.basket {
-  
-  width: 508px;
-height: 53px;
-  margin-bottom: 32px;
-}
-.shop-wrap.basket {
-  height: 30px;
+/*!-------basket--768------- */
+@media screen and (min-width:768px) {
+  .shop-img.basket {
+    width: 116px;
+    height: 165px;
+    margin-right: unset;
   }
-  
-  .shop-author.basket {
-  
+
+  .book-info.basket {
+    margin-left: 24px;
   }
+
+  .shop-title.basket {
+    margin-bottom: 4px;
+  }
+
+  .shop-description.basket {
+
+    width: 508px;
+    height: 53px;
+    margin-bottom: 32px;
+  }
+
+  .shop-wrap.basket {
+    height: 30px;
+  }
+
+
   .shop-link-list.basket {
     width: 140px;
     height: 30px;
     gap: 16px;
-  
+
   }
-  
+
   .icon-shop-amz.basket {
     width: 48px;
-height: 15px;
+    height: 15px;
   }
+
   .icon-shop.basket {
     width: 28px;
     height: 27px;
@@ -416,6 +437,12 @@ height: 15px;
   .shop-product {
     width: 996x;
     height: 213px;
+
+
+    margin-left: 420px;
+    margin-top: 40px;
+
+
   }
 
   .shop-img {
@@ -426,6 +453,13 @@ height: 15px;
   .shop-charity {
     display: block;
   }
+
+  .shopping-list {
+    display: unset;
+    margin-left: 320px;
+  }
+
+
 }
 
 
@@ -599,7 +633,7 @@ height: 15px;
   }
 
 
-  .modal-img{
+  .modal-img {
     width: 287px;
     height: 408px;
     border-radius: 8px;
@@ -618,50 +652,51 @@ height: 15px;
 
   }
 
-  .modal-img{
+  .modal-img {
     width: 192px;
-height: 281px;
+    height: 281px;
     border-radius: 8px;
   }
-.modal-book-card {
-  display: flex;
-}
 
-.book-info {
-  
-  margin-top: unset;
-  margin-left: 24px;
-  
-}
+  .modal-book-card {
+    display: flex;
+  }
+
+  .book-info {
+
+    margin-top: unset;
+    margin-left: 24px;
+
+  }
 
 
-.shop-title {
-  
-  margin-bottom: 8px;
-}
+  .shop-title {
 
-.shop-author {
-  margin-bottom: 20px;
-}
+    margin-bottom: 8px;
+  }
 
-.shop-description {
+  .shop-author {
+    margin-bottom: 20px;
+  }
 
-  width: 100%;
-flex-grow: unset;
-  margin-bottom: 20px;
-  
-}
+  .shop-description {
 
-.add-book {
-  width: 499px;
-  height: 64px; 
- bottom: 40px;
- left: 40px;
-font-size: 18px;
-line-height: 1.33;
-letter-spacing: -0.18px;
+    width: 100%;
+    flex-grow: unset;
+    margin-bottom: 20px;
 
-}
+  }
+
+  .add-book {
+    width: 499px;
+    height: 64px;
+    bottom: 40px;
+    left: 40px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+
+  }
 
 
 
@@ -726,9 +761,7 @@ letter-spacing: -0.18px;
 }
 
 /* ==========desktop============== */
-@media screen and (min-width:1280px) {
-  
-}
+@media screen and (min-width:1280px) {}
 
 /* ==========HOVER======================== */
 .modal-close-btn:hover,
@@ -776,4 +809,3 @@ letter-spacing: -0.18px;
   mix-blend-mode: luminosity;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
-
