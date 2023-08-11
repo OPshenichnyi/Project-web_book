@@ -2,8 +2,7 @@ const hiddebBurgMenu = document.querySelector('.conteiner-hidden');
  const burgerBtn = document.querySelector('.burger-button');
  const header =  document.querySelector('.header')
 
-burgerBtn.addEventListener('click', function () {
-   
+burgerBtn.addEventListener('click', function () {   
     if (hiddebBurgMenu.hasAttribute('hidden')) {
 
         hiddebBurgMenu.hidden = false;      
@@ -34,8 +33,7 @@ burgerBtn.innerHTML=`
     hiddebBurgMenu.hidden = true;
     // header.classList.remove('js-fixed')
     burgerBtn.innerHTML=`
-    <svg
-    class ='js-icon-burger'
+    <svg    
       xmlns="http://www.w3.org/2000/svg"
       width="28"
       height="28"
@@ -48,7 +46,6 @@ burgerBtn.innerHTML=`
         stroke-width="2"
         d="M19.833 11.667H3.5M24.5 7h-21M24.5 16.333h-21M19.833 21H3.5"
       />
-    </svg>`;      
-
+    </svg>`;     
      })
 

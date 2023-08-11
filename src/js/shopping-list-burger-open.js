@@ -37,7 +37,7 @@ burgerBtn.innerHTML=`
     // header.classList.remove('js-fixed')
     burgerBtn.innerHTML=`
     <svg
-    class ='js-icon-burger'
+    
       xmlns="http://www.w3.org/2000/svg"
       width="28"
       height="28"
