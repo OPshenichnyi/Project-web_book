@@ -51,8 +51,7 @@ function clickSeeMore(e) {
   const btnChek = e.target.textContent; 
   
   const selectCategory = e.target.id;
-  console.log(selectCategory)
-  console.dir(refs.categoriesContEl)
+
 
   if(selectCategory ) {
     
@@ -62,7 +61,7 @@ if (selectCategory === nameNeed) {
 
   item.classList.add('active');
   item.style.textTransform = 'uppercase';
-console.log(item)
+
 }
 
   }
@@ -88,7 +87,7 @@ function cleanSectionBook() {
 
 // Получаем ссылки на все кнопки "See More"
 const seeMoreButtons = document.querySelectorAll('.js-btn-category')
-console.log(seeMoreButtons);
+
 // Получаем ссылку на список <ul>
 const categoryList = document.querySelector('.category__list');
 
