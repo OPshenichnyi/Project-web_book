@@ -34,22 +34,7 @@ burgerBtn.innerHTML=`
     hiddebBurgMenu.hidden = true;
     // header.classList.remove('js-fixed')
     burgerBtn.innerHTML=`
-<<<<<<< HEAD
-    <svg    
-      xmlns="http://www.w3.org/2000/svg"
-      width="28"
-      height="28"
-      fill="none"
-    >
-      <path
-        stroke="#111"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19.833 11.667H3.5M24.5 7h-21M24.5 16.333h-21M19.833 21H3.5"
-      />
-    </svg>`;     
-=======
+   
 
     <svg class="svg-button svg-button-hover" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
             <path d="M19.8333 11.6667H3.5"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,6 +48,6 @@ burgerBtn.innerHTML=`
     
 
 
->>>>>>> ebc7b83aa3c914b1172273da13c6707a7f9ac4b6
+
      })
 
