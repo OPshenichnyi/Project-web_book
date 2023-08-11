@@ -9,7 +9,7 @@ import './switcher'
 import { charitys, renderCharities } from './charity'
 
 charitys;
-renderCharities()
+renderCharities
 
 const elements = {
     container: document.querySelector('.js-list'),
