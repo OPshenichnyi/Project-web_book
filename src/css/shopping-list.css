@@ -82,7 +82,7 @@
     flex-shrink: 0;
     border-radius: 16px;
     border: 2px solid rgba(79, 46, 232, 0.40);
-    background: #FFF;
+    background: var(--black-first-color);
   }
 
   .shop-dlt-btn {
@@ -105,7 +105,6 @@
   .shop-img {
     width: 100px;
     height: 142px;
-    margin-right: 14px;
     border-radius: 8px;
   }
 
@@ -125,10 +124,8 @@
     color: #B4AFAF;
     margin-bottom: 8px;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.16667;
-    /* 116.667% */
     letter-spacing: 0.36px;
   }
 
@@ -160,7 +157,7 @@ margin-bottom: 18px;
   }
 
   .icon-trash {
-    fill: #ffffff;
+   stroke: #ffffff;
     width: 16px;
     height: 16px;
   }
@@ -231,6 +228,47 @@ letter-spacing: -0.14px;
 .shop-container {
   display: flex;
 }
+
+/*!-------basket--------- */
+
+.book-info.basket {
+  margin-top: unset;
+  margin-left: 14px;
+}
+.shop-description.basket {
+  
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 193px;
+height: 68px;
+margin-bottom: 16px;
+}
+.shop-link-list.basket {
+  width: 80px;
+  height: 16px;
+  gap: 8px;
+
+}
+
+.shop-wrap.basket {
+height: 16px;
+}
+
+.shop-author.basket {
+margin-bottom: unset;
+}
+
+
+.icon-shop-amz.basket {
+  width: 32px;
+  height: 11px;
+}
+.icon-shop.basket {
+width: 16px;
+height: 16px;
+}
+
+
 
 /* ===========TABLET================== */
 @media screen and (min-width:768px) {
@@ -323,6 +361,49 @@ letter-spacing: -0.14px;
 
   }
 }
+/*!-------basket--768------- */
+
+.shop-img.basket {
+  width: 116px;
+height: 165px;
+margin-right: unset;
+}
+
+.book-info.basket {
+  margin-left: 24px;
+}
+.shop-title.basket {
+  margin-bottom: 4px;
+}
+.shop-description.basket {
+  
+  width: 508px;
+height: 53px;
+  margin-bottom: 32px;
+}
+.shop-wrap.basket {
+  height: 30px;
+  }
+  
+  .shop-author.basket {
+  
+  }
+  .shop-link-list.basket {
+    width: 140px;
+    height: 30px;
+    gap: 16px;
+  
+  }
+  
+  .icon-shop-amz.basket {
+    width: 48px;
+height: 15px;
+  }
+  .icon-shop.basket {
+    width: 28px;
+    height: 27px;
+  }
+
 
 /* ===========DESKTOP================== */
 
@@ -357,7 +438,7 @@ letter-spacing: -0.14px;
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
-  z-index: 100;
+  z-index: 1100;
   transition: opacity var(--transition), visibility var(--transition);
 
 }
