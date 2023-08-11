@@ -6,10 +6,10 @@ import bookshops from "../images/bookshops.png";
 import './shopping-list-active-page'
 import './shopping-list-burger-open'
 import './switcher'
-import { charitys, renderCharities } from './charity'
+// import { charitys, renderCharities } from './charity'
 
-charitys;
-renderCharities
+// charitys;
+// renderCharities
 
 const elements = {
     container: document.querySelector('.js-list'),
