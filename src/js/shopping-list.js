@@ -5,6 +5,10 @@ import apple from "../images/apple.png";
 import bookshops from "../images/bookshops.png";
 import './shopping-list-active-page'
 import './shopping-list-burger-open'
+import { charitys, renderCharities } from './charity'
+
+charitys;
+renderCharities()
 
 
 const elements = {
