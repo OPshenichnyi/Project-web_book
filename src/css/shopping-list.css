@@ -38,6 +38,10 @@
 @media screen and (min-width: 375px),
 (max-width:767px) {
 
+
+
+
+
   .shop-charity {
     display: none;
   }
@@ -170,14 +174,26 @@
     align-items: center;
   }
 
+
+  .js-modal-txt {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 242px;
+    color: var(--text-modal-msg);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+  }
+
   .add-book {
-    width: 211px;
+    min-width: 211px;
     height: 46px;
     border-radius: 40px;
     border: 2px solid #4F2EE8;
-    position: absolute;
-    bottom: 40px;
-    left: 62px;
+    display: block;
     color: var(--bookname-color);
     font-weight: 700;
     text-transform: uppercase;
@@ -185,6 +201,12 @@
     line-height: 1.285;
     letter-spacing: -0.14px;
     transition: var(--default-transition);
+    padding-left: 23px;
+    padding-right: 23px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
   }
 
   .add-book:hover {
@@ -305,6 +327,23 @@
 
   }
 
+  .js-modal-txt {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 242px;
+    color: var(--text-modal-msg);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    position: absolute;
+    bottom: 40px;
+    left: 170px;
+  }
+
+
 
   .shop-product {
 
@@ -397,7 +436,7 @@
   }
 
   .shop-description.basket {
-
+    white-space: normal;
     width: 508px;
     height: 53px;
     margin-bottom: 32px;
@@ -435,18 +474,13 @@
   }
 
   .shop-product {
-    width: 996x;
+    width: 996px;
     height: 213px;
-
-
     margin-left: 420px;
     margin-top: 40px;
-
-
   }
 
   .shop-img {
-
     height: 165px;
   }
 
@@ -457,6 +491,13 @@
   .shopping-list {
     display: unset;
     margin-left: 320px;
+  }
+
+  .shop-description.basket {
+
+    width: 808px;
+    height: 53px;
+    margin-bottom: 32px;
   }
 
 
@@ -647,7 +688,7 @@
 @media screen and (min-width:768px) {
   .modal {
     width: 579px;
-    min-height: 465px;
+    min-height: 501px;
     padding: 40px;
 
   }
@@ -690,12 +731,12 @@
   .add-book {
     width: 499px;
     height: 64px;
-    bottom: 40px;
+    bottom: 82px;
     left: 40px;
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: -0.18px;
-
+position: absolute;
   }
 
 
