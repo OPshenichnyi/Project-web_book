@@ -76,8 +76,9 @@ function createModalMarkup(obj) {
         </ul>
         </div>
         </div>
+        <p class="modal-shop-text">Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
         <button class="js-modal-clear modal-dlt-btn" type="button">remove from the shopping list</button>
-        <p class="modal-shop-text">Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
+        
         
   </div>`
 }

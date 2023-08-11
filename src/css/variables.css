@@ -29,6 +29,7 @@
   --logo-txt-svg:  #000;
   --shadow-color: rgba(0, 0, 0, 0.55);
   --shop-list-txt: rgba(0, 0, 0, 0.60);
+  --text-modal-msg: rgba(17, 17, 17, 0.50)
 }
 
 :root[data-theme='dark'] {
@@ -60,7 +61,8 @@
   --modal-shop:brightness(0) invert(1);
   --logo-txt-svg: #F3F3F3;
   --shadow-color: rgba(100, 60, 255, 0.85);
-  --shop-list-txt: rgba(255, 255, 255, 0.60)
+  --shop-list-txt: rgba(255, 255, 255, 0.60);
+  --text-modal-msg:  rgba(255, 255, 255, 0.50);
 }
 
 :root {
