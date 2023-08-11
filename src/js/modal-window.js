@@ -78,7 +78,9 @@ refs.backdrop.addEventListener('click', (e) => {
     if (e.target.dataset.modal !== 'open') {
         return
     } else {
-       addIsHidden();
+        addIsHidden();
+
+        
     }
     
 })
@@ -96,7 +98,7 @@ function addIsHidden() {
     refs.backdrop.classList.add("is-hidden"); 
     document.body.style.position = '';
     refs.modalCard.innerHTML = ``;
-    
+     refs.txtCongr.style.visibility = "hidden";
 }
 
 // Функція відмальовує карточку модального вікна 
