@@ -362,7 +362,7 @@ height: 16px;
   }
 }
 /*!-------basket--768------- */
-
+@media screen and (min-width:768px){
 .shop-img.basket {
   width: 116px;
 height: 165px;
@@ -403,7 +403,7 @@ height: 15px;
     width: 28px;
     height: 27px;
   }
-
+}
 
 /* ===========DESKTOP================== */
 
