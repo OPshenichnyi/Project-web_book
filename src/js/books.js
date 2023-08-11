@@ -1,5 +1,6 @@
 import { getAllBooks} from './api'
-import{onClick} from './book-by-category'
+import { onClick } from './book-by-category'
+import { activateItem } from './categories';
 const refs = {
   categoriesContEl: document.querySelector(".categories"),
   bookEl: document.querySelector(".book_cards"),
@@ -48,29 +49,25 @@ function markupBookCart(category, arrBook) {
 
 
 function clickSeeMore(e) {
-  const btnChek = e.target.textContent; 
+  const btnChek = e.target.textContent;
   
   const selectCategory = e.target.id;
-
-
-  if(selectCategory ) {
     
-let nameNeed = refs.categoriesContEl.children[`${selectCategory}`].id;
-if (selectCategory === nameNeed) {
-  const item = refs.categoriesContEl.children[`${selectCategory}`];
-
-  item.classList.add('active');
-  item.style.textTransform = 'uppercase';
-
-}
-
+  let nameNeed = refs.categoriesContEl.children[`${selectCategory}`].id;
+  if (selectCategory === nameNeed) {
+    const item = refs.categoriesContEl.children[`${selectCategory}`];
+activateItem(item)
+  
   }
+
+  
   if (btnChek === 'SEE MORE') {
     onClick(selectCategory);
     scrollUpSection();
     
   }
 }
+
 
 function scrollUpSection() {
   refs.bookEl.scrollIntoView({ block: "start", behavior: "smooth" });
@@ -84,30 +81,3 @@ function cleanSectionBook() {
    rendeCategory()
 }
 
-
-// Получаем ссылки на все кнопки "See More"
-const seeMoreButtons = document.querySelectorAll('.js-btn-category')
-
-// Получаем ссылку на список <ul>
-const categoryList = document.querySelector('.category__list');
-
-// Добавляем обработчик события на каждую кнопку "See More"
-seeMoreButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Получаем жанр из ID кнопки
-    const genre = button.getAttribute('id').replace('see-more-', '');
-
-    // Находим все элементы <li> в списке
-    const liItems = categoryList.querySelectorAll('li');
-
-    // Проходимся по всем элементам <li>
-    liItems.forEach(li => {
-      // Проверяем, соответствует ли текст жанру
-      if (li.textContent === genre) {
-        li.classList.add('active');
-      } else {
-        li.classList.remove('active');
-      }
-    });
-  });
-});

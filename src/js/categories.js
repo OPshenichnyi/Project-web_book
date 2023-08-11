@@ -19,7 +19,7 @@ const categoryList = document.querySelector('.category__list');
 const categoryTitle = document.querySelector('.category_title');
 let activeItem = null;
 
-function activateItem(listItem) {
+export function activateItem(listItem) {
   if (activeItem) {
     activeItem.style.textTransform = 'none';
     activeItem.classList.remove('active');
