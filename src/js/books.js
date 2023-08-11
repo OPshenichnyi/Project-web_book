@@ -8,6 +8,7 @@ const refs = {
   startCategory: document.querySelector('.charity-wrap')
 }
 
+refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e)});
 refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
 
 rendeCategory()
@@ -24,7 +25,7 @@ function markupBookCart(category, arrBook) {
   let titleSection = `<h2 class="js-name-category">${category}</h2>`;
   
   const book = arrBook.map(e => `<li class="js-item-book">
-            <img class="img_book" src="${e.book_image}" alt="">
+            <img class="img_book" src="${e.book_image}" alt="${e._id}">
             <div class="js-title-book">
             <h3 class="book-name">${e.title}</h3>
             <p class="contributor">${e.contributor}</p>
@@ -35,7 +36,6 @@ function markupBookCart(category, arrBook) {
         `<div class="js-container-categories">${titleSection}
         <ul class="js-list-books-category">${book}</ul>
         <button type="button" class="js-btn-category"id="${category}">SEE MORE</button></div>`);
-  refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e)});
 }
 
 
@@ -47,7 +47,6 @@ function clickSeeMore(e) {
   if (btnChek === 'SEE MORE') {
     onClick(selectCategory);
     scrollUpSection();
-    refs.bookEl.removeEventListener('click', (e) => { clickSeeMore(e.target.textContent, e.target.id) });
     
   }
 }

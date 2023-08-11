@@ -9,6 +9,8 @@ const refs = {
     bookEl: document.querySelector('.book_cards'),    
 }
 
+addEventlisImg()
+
 refs.categoriesContEl.addEventListener('click', (e => { onClick(e.target.textContent) }))
 
 function onClick(evt) {
@@ -32,7 +34,7 @@ function onClick(evt) {
 
 function createCategoryMarkup(data,lastElement,categoryTitle) {
     const titleSection = `<h2 class="js-category-title">${categoryTitle} <span class ="last-title-el">${lastElement}</span></h2>`
-    addEventlisImg()
+    
     const bookByGenre = data.map(({ book_image, title, contributor, _id }) => `<li class = "book-by-genre" >
             <img class ="img_book" src="${book_image}" alt="${_id}">
             <div class = book-title>
