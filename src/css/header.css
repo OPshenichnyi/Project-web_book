@@ -9,7 +9,7 @@
   margin-right: auto;
   width: 100%;
   border: 2px solid var(--header-outline);
-  background: var(--bgc);
+  background: var(--black-first-color);
   border-radius: 0px 0px 8px 8px;
   transition: var(--default-transition);
 }

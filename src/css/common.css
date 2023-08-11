@@ -81,8 +81,8 @@ body {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.08333;
-    /* 108.333% */
     letter-spacing: -1.92px;
+   
   }
   .wrapper-sidebar {
     display: flex;
@@ -146,13 +146,15 @@ body {
 }
 
 .title {
-  color: #111;
+  color: var(--bookname-color);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.1875;
   /* 118.75% */
   letter-spacing: -1.28px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 .title-tail {
