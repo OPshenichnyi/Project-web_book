@@ -10,17 +10,22 @@ const refs = {
     bookCard: document.querySelector('.js-cont-for-books'),
     backdrop: document.querySelector('.backdrop'),
     modalCard: document.querySelector('.modal-book-item'),
-    btnClose: document.querySelector('.modal-close-btn')
+    btnClose: document.querySelector('.modal-close-btn'),
+    txtCongr: document.querySelector('.js-modal-txt')
     
 }
 
-const PRODUCT_LS_KEY = 'checkout';
 
+const PRODUCT_LS_KEY = 'checkout';
+let idBook = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY));
+ refs.txtCongr.style.visibility = "hidden";
 
 // Функція викликає модальне вікно дає запит на на АРІ та запускає рендер карточки
-let idBook = []
 
 
+refs.modalCard.addEventListener('click', (e => {
+    addBookShopList(e)
+}))
 
 
 function addEventlisImg() {
@@ -37,25 +42,33 @@ function addEventlisImg() {
         refs.backdrop.classList.remove("is-hidden");
 
         getBookById(e.target.alt).then(data => { createMarkup(data) });
-        
-        
-        refs.modalCard.addEventListener('click', (e => {
-            addBookShopList(e)
-        }))
-        
  }));
 }
 
+
+
 // Функція додає прослуховувач на кнопку Add to shopping list
 function addBookShopList(e) {
+
     if (e.target.nodeName !== 'BUTTON') {
                 return;
     }
-    if (idBook.includes(e.target.id)) {
-        return
+    
+    if (e.target.textContent === 'ADD TO SHOPPING LIST') {
+        e.target.textContent = 'REMOVE FROM THE SHOPPING LIST';
+        
+        idBook.push(e.target.id);
+        localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(idBook))
+        refs.txtCongr.style.visibility = "visible";
+        return; 
     }
-    idBook.push(e.target.id);
+
+    idBook = JSON.parse(localStorage.getItem(PRODUCT_LS_KEY));
+    e.target.textContent = 'ADD TO SHOPPING LIST'
+    const IdxRemove = idBook.indexOf(e.target.id);
+    idBook.splice(IdxRemove);
     localStorage.setItem(PRODUCT_LS_KEY, JSON.stringify(idBook))
+    refs.txtCongr.style.visibility = "hidden";
 }
 
 
@@ -82,11 +95,13 @@ function addEvtEsc(e) {
 function addIsHidden() {
     refs.backdrop.classList.add("is-hidden"); 
     document.body.style.position = '';
+    refs.modalCard.innerHTML = ``;
+    
 }
 
 // Функція відмальовує карточку модального вікна 
 function createMarkup(arr) {
-    const { _id, list_name, title, author, description, book_image, buy_links } = arr;
+    const { _id, title, author, description, book_image, buy_links } = arr;
     
     const bookCardHtml = ` <div data-id="${_id}" class="modal-book-card">
         <img class="modal-img" src="${book_image}" alt="${title}" />
@@ -116,8 +131,10 @@ function createMarkup(arr) {
              </div>
              </div>
              <button type="button" class="add-book" id="${_id}">ADD TO SHOPPING LIST</button>
+               
        </div>`
     refs.modalCard.innerHTML = bookCardHtml;
+   
 }
 
 
