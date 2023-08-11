@@ -72,6 +72,18 @@
     height: 472px;
     width: 329px;
   }
+  .category_title {
+    height: 24px;
+    margin-bottom: 32px;
+  }
+  .category_list:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .category_list{
+    height: 24px;
+  }
+
+
 }
 @media screen and (min-width: 1280px) {
   

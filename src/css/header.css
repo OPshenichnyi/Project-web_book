@@ -1,14 +1,28 @@
 .header {
   z-index: 1000;
-  position: fixed;
+
+   position: fixed;
+
+  
+
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   border: 2px solid var(--header-outline);
-  background: var(--bgc);
+  background: var(--black-first-color);
   border-radius: 0px 0px 8px 8px;
   transition: var(--default-transition);
 }
+.svg-logo-text {
+  fill: var(--logo-txt-svg);
+  transition: filter 0.3s ease-in-out;
+}
+
+
+.svg-logo-text:hover {
+  filter: drop-shadow(0px 4px 4px var(--shadow-color)); 
+}
+
 
 .container-header {
   width: 100%;
@@ -28,28 +42,22 @@
   height: 28px;
 }
 
-.logo-text {
-  color: var(--logotype-bookshelf);
-}
-.icon {
-  width: 24px;
-  height: 24px;
-}
+
+
 
 .buttons-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 14px;
 }
 
-/* .burger-button {
+ .burger-button {
   width: 28px;
   height: 28px;
-  filter: var(--burger);
-  stroke: var(--white);
-  background-image: url(/src/images/icons_by_one/burger.svg);
-  margin-left: 14px;
-} */
+  
+  padding: 0;
+} 
 
 .burger-icon {
   display: flex;
@@ -59,6 +67,15 @@
 
 .navigation {
   display: none;
+}
+
+.svg-button {
+  stroke: var(--logo-txt-svg);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.svg-button-hover:hover {
+  stroke: rgba(79, 46, 232, 1);
 }
 
 .user-button {

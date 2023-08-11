@@ -17,7 +17,15 @@
         #fff 100%
       );
     }
-       
+
+   
+.svg-button-close {
+  margin-top: 3px;
+  stroke: var(--logo-txt-svg);
+  transition: stroke 0.3s ease-in-out;
+}
+
+
 
     .burger-mobile-menu_coteiner {
       position: relative;

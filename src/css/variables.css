@@ -26,6 +26,8 @@
   --hover: #4f2ee8;
   --burger: brightness(0);
   --modal-shop:grayscale(100%);
+  --logo-txt-svg:  #000;
+  --shadow-color: rgba(0, 0, 0, 0.55);
 }
 
 :root[data-theme='dark'] {
@@ -55,6 +57,8 @@
   --hover: #eac645;
   --burger: brightness(0) invert();
   --modal-shop:brightness(0) invert(1);
+  --logo-txt-svg: #F3F3F3;
+  --shadow-color: rgba(100, 60, 255, 0.85);
 }
 
 :root {
