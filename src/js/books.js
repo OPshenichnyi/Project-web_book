@@ -5,10 +5,16 @@ const refs = {
   bookEl: document.querySelector(".book_cards"),
   seeMore: document.querySelector('.js-btn-category'),
   allCategoryies: document.querySelector('.category_title'),
-  startCategory: document.querySelector('.charity-wrap')
+  startCategory: document.querySelector('.charity-wrap'),
+  categoriesContEl: document.querySelector('.category__list')
 }
+const test = refs.categoriesContEl.children;
 
-refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e)});
+console.log(...test);
+  
+
+
+refs.bookEl.addEventListener('click', (e) => { clickSeeMore(e) });
 refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
 
 rendeCategory()
@@ -43,7 +49,22 @@ function markupBookCart(category, arrBook) {
 
 function clickSeeMore(e) {
   const btnChek = e.target.textContent; 
+  
   const selectCategory = e.target.id;
+
+
+  if(selectCategory ) {
+    
+let nameNeed = refs.categoriesContEl.children[`${selectCategory}`].id;
+if (selectCategory === nameNeed) {
+  const item = refs.categoriesContEl.children[`${selectCategory}`];
+
+  item.classList.add('active');
+  item.style.textTransform = 'uppercase';
+
+}
+
+  }
   if (btnChek === 'SEE MORE') {
     onClick(selectCategory);
     scrollUpSection();
@@ -62,3 +83,31 @@ function cleanSectionBook() {
   refs.bookEl.insertAdjacentHTML ('beforeend','<h1 class="js-category-title">Best Sellers <span class="last-title-el">Books</span></h1>');
    rendeCategory()
 }
+
+
+// Получаем ссылки на все кнопки "See More"
+const seeMoreButtons = document.querySelectorAll('.js-btn-category')
+
+// Получаем ссылку на список <ul>
+const categoryList = document.querySelector('.category__list');
+
+// Добавляем обработчик события на каждую кнопку "See More"
+seeMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем жанр из ID кнопки
+    const genre = button.getAttribute('id').replace('see-more-', '');
+
+    // Находим все элементы <li> в списке
+    const liItems = categoryList.querySelectorAll('li');
+
+    // Проходимся по всем элементам <li>
+    liItems.forEach(li => {
+      // Проверяем, соответствует ли текст жанру
+      if (li.textContent === genre) {
+        li.classList.add('active');
+      } else {
+        li.classList.remove('active');
+      }
+    });
+  });
+});

@@ -8,10 +8,11 @@ function createMarkupCategory(data) {
   const categoryEL = data
     .map(
       ({ list_name }) =>
-        `<li class="category_list" name="${list_name}">${list_name}</li>`
+        `<li class="category_list" name="${list_name}" id = "${list_name}" >${list_name}</li>`
     )
     .join(' ');
   categoryList.insertAdjacentHTML('beforeend', categoryEL);
+
 }
 
 const categoryList = document.querySelector('.category__list');

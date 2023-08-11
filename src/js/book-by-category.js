@@ -11,7 +11,7 @@ const refs = {
 
 addEventlisImg()
 
-refs.categoriesContEl.addEventListener('click', (e => { onClick(e.target.textContent) }))
+refs.categoriesContEl.addEventListener('click', (e => { onClick(e.target.textContent), console.dir(e.target.id) }))
 
 function onClick(evt) {
 
