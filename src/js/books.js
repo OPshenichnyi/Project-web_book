@@ -60,7 +60,6 @@ activateItem(item)
   
   }
 
-  
   if (btnChek === 'SEE MORE') {
     onClick(selectCategory);
     scrollUpSection();
